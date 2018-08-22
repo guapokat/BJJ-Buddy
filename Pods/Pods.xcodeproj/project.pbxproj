@@ -1,0 +1,1011 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		075E5EC9151C2E6B345F2251AD1984AC /* Pods-BJJ BuddyUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A58403A2B4BBABF3F4C61AD9BA0F420 /* Pods-BJJ BuddyUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		174DBE4401B10A8BF5618E9ADAC5CD05 /* Pods-BJJ BuddyTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BA6D1CF597CB82586FF668D18CA24765 /* Pods-BJJ BuddyTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22310FE8930C95CAAFAB685B4F73ABC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		2F40C6951809AD3D41A4C4ED9BE35A06 /* Pods-BJJ Buddy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 631D55DCDC27E1058E5DB06C9FAF0193 /* Pods-BJJ Buddy-dummy.m */; };
+		3380A48EDC6E57DEEE4A4CC96A555561 /* RAMAnimatedTabBarController+BottomLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDB8E0CD3E6FA8C13AB15F70CD7936 /* RAMAnimatedTabBarController+BottomLine.swift */; };
+		3DBCE65E748E62B0F949D4253D438751 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		4B4167D710A7A5C21344CDFFA7CB8733 /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E209E794A16F018B687CE0957FA015A /* RAMBounceAnimation.swift */; };
+		5368F51755FF3B7B2B3759A7F4C86A1A /* RAMAnimatedTabBarController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A496F3829B8558F8915707A639305862 /* RAMAnimatedTabBarController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B577E3AA81A1BB477FA7AB497580B01 /* RAMAnimatedTabBarController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A07C42425965EA21D735BD657B8FED55 /* RAMAnimatedTabBarController-dummy.m */; };
+		6C574431201D386A9257C9376DBE727E /* Pods-BJJ BuddyUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E9375FD3602E319A57B3816A1A537521 /* Pods-BJJ BuddyUITests-dummy.m */; };
+		7E70AAA24C45B9C41AFB98730E0327AC /* RAMBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5D43E1D1534E4FB3A946B3C53E601A /* RAMBadge.swift */; };
+		8912D980A1A03F62FDEF9421562AC607 /* RAMTransitionItemAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5930E0E293313E90498EE50EC42CFA36 /* RAMTransitionItemAnimations.swift */; };
+		A336419CD11D47B0A4F54BE277FF7FAF /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA10CC6749899CDDF6CC2D8FD0D6A25 /* RAMAnimatedTabBarController.swift */; };
+		A3E025B006BBAD0F684EFB60347C6813 /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4F7045D1681DC5EC7A65D6741A2DA3 /* RAMItemAnimationProtocol.swift */; };
+		A5E7CC41F4A5A818364B1BCB0040D75D /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03D9476B30E71AA602CABEB210D85FD /* RAMFrameItemAnimation.swift */; };
+		B3436F5DB83BBD9646F9A0AA7EF2D1EB /* RAMRotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979ADF614DF1A97FE7756A4070A59038 /* RAMRotationAnimation.swift */; };
+		BD38C6E6935E02C26AC1F814BF5BB998 /* RAMFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB4131A600DCD0D770B663D6CB8C120 /* RAMFumeAnimation.swift */; };
+		D5CA7449E631AB93ED75C0C1DD99AF1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		EBA7D8F61C055B2B7F8ACCBB7B7925E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		FA943C32E2DF4C5C8B32107B90004270 /* Pods-BJJ BuddyTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A619BE19F1C3877A1D1FB539A9A2C0 /* Pods-BJJ BuddyTests-dummy.m */; };
+		FC812D1017DC622947ECFE147C5A2B77 /* Pods-BJJ Buddy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC6591990F6D6124F017229520C24C5 /* Pods-BJJ Buddy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		63184E988FEFDAE8AD6EAA49A46EE6D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC4AA4E0F60B33CD1C94F0BFAC2104C2;
+			remoteInfo = "Pods-BJJ Buddy";
+		};
+		6C9B4129D92420A23622D45AC21E590B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEE2CEE44CF7C71FBD1016E68C26EBB2;
+			remoteInfo = RAMAnimatedTabBarController;
+		};
+		CB87CE0D77C3A43C97B3361ABFAD548A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC4AA4E0F60B33CD1C94F0BFAC2104C2;
+			remoteInfo = "Pods-BJJ Buddy";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		10EBEBA19A2D6688E65C81C9C3471E80 /* Pods-BJJ BuddyUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BJJ BuddyUITests.modulemap"; sourceTree = "<group>"; };
+		1BB4131A600DCD0D770B663D6CB8C120 /* RAMFumeAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMFumeAnimation.swift; path = RAMAnimatedTabBarController/Animations/FumeAnimation/RAMFumeAnimation.swift; sourceTree = "<group>"; };
+		1C2A5F6A6995CF3452AD5020370F1101 /* Pods-BJJ Buddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BJJ Buddy.debug.xcconfig"; sourceTree = "<group>"; };
+		2AFB4CEF20BEFDF87FF223D9F60DFF41 /* Pods-BJJ Buddy-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BJJ Buddy-resources.sh"; sourceTree = "<group>"; };
+		2D18E48B2B56DA12032A7F8C91BFDB4B /* Pods-BJJ Buddy-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BJJ Buddy-frameworks.sh"; sourceTree = "<group>"; };
+		3170116C4DBB3A7C88C1546DEF3ADEB2 /* Pods-BJJ Buddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BJJ Buddy.release.xcconfig"; sourceTree = "<group>"; };
+		3FBDB8E0CD3E6FA8C13AB15F70CD7936 /* RAMAnimatedTabBarController+BottomLine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "RAMAnimatedTabBarController+BottomLine.swift"; path = "RAMAnimatedTabBarController/RAMAnimatedTabBarController+BottomLine.swift"; sourceTree = "<group>"; };
+		41A61E2389A42037CAAB2974B5E2C701 /* RAMAnimatedTabBarController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RAMAnimatedTabBarController.modulemap; sourceTree = "<group>"; };
+		4B4F7045D1681DC5EC7A65D6741A2DA3 /* RAMItemAnimationProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMItemAnimationProtocol.swift; path = RAMAnimatedTabBarController/RAMItemAnimationProtocol.swift; sourceTree = "<group>"; };
+		4BD8580DFCF4AF26E6B8D65EA9912476 /* RAMAnimatedTabBarController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RAMAnimatedTabBarController.framework; path = RAMAnimatedTabBarController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5930E0E293313E90498EE50EC42CFA36 /* RAMTransitionItemAnimations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMTransitionItemAnimations.swift; path = RAMAnimatedTabBarController/Animations/TransitionAniamtions/RAMTransitionItemAnimations.swift; sourceTree = "<group>"; };
+		59BE9C424C7503F7C5B14DE9AE8BF548 /* Pods-BJJ Buddy-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BJJ Buddy-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5A58403A2B4BBABF3F4C61AD9BA0F420 /* Pods-BJJ BuddyUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BJJ BuddyUITests-umbrella.h"; sourceTree = "<group>"; };
+		5B474361985361B62D9CE4755F45B012 /* Pods-BJJ BuddyUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BJJ BuddyUITests-resources.sh"; sourceTree = "<group>"; };
+		60717CA6B7033F378D1520D3665677E4 /* Pods-BJJ BuddyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BJJ BuddyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		631D55DCDC27E1058E5DB06C9FAF0193 /* Pods-BJJ Buddy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BJJ Buddy-dummy.m"; sourceTree = "<group>"; };
+		661285DAC61A769654BFB03AD6A201C3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		688C9B14E44ED821501015235E5C4018 /* Pods-BJJ BuddyUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BJJ BuddyUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		6BC6591990F6D6124F017229520C24C5 /* Pods-BJJ Buddy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BJJ Buddy-umbrella.h"; sourceTree = "<group>"; };
+		72B0829CA7F113C58733946B61763A41 /* Pods_BJJ_BuddyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BJJ_BuddyTests.framework; path = "Pods-BJJ BuddyTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		75349F03EC565C1E1F67C64926010353 /* Pods_BJJ_Buddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BJJ_Buddy.framework; path = "Pods-BJJ Buddy.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7985614763E52742BAF9A5E78755283F /* Pods_BJJ_BuddyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BJJ_BuddyUITests.framework; path = "Pods-BJJ BuddyUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79933BA468CCC44A3EDB0740F67ED535 /* Pods-BJJ BuddyTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BJJ BuddyTests-frameworks.sh"; sourceTree = "<group>"; };
+		7C6C067433CCBECD1EE19BBE0FE9D753 /* Pods-BJJ BuddyTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BJJ BuddyTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		7E209E794A16F018B687CE0957FA015A /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMBounceAnimation.swift; path = RAMAnimatedTabBarController/Animations/BounceAnimation/RAMBounceAnimation.swift; sourceTree = "<group>"; };
+		8696FCCF700ADC7CAD8C9F68F0B13B2F /* Pods-BJJ BuddyTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BJJ BuddyTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		87771845AEBDADD02AA6E0F847C4392F /* Pods-BJJ BuddyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BJJ BuddyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8AA10CC6749899CDDF6CC2D8FD0D6A25 /* RAMAnimatedTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMAnimatedTabBarController.swift; path = RAMAnimatedTabBarController/RAMAnimatedTabBarController.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96DB347EEB436F0A9F28EC9C7A5874A9 /* RAMAnimatedTabBarController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RAMAnimatedTabBarController-prefix.pch"; sourceTree = "<group>"; };
+		979ADF614DF1A97FE7756A4070A59038 /* RAMRotationAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMRotationAnimation.swift; path = RAMAnimatedTabBarController/Animations/RotationAnimation/RAMRotationAnimation.swift; sourceTree = "<group>"; };
+		9B26F1F4F4C182718C50DCA272173C46 /* Pods-BJJ BuddyUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BJJ BuddyUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A07C42425965EA21D735BD657B8FED55 /* RAMAnimatedTabBarController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RAMAnimatedTabBarController-dummy.m"; sourceTree = "<group>"; };
+		A0A619BE19F1C3877A1D1FB539A9A2C0 /* Pods-BJJ BuddyTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BJJ BuddyTests-dummy.m"; sourceTree = "<group>"; };
+		A496F3829B8558F8915707A639305862 /* RAMAnimatedTabBarController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RAMAnimatedTabBarController-umbrella.h"; sourceTree = "<group>"; };
+		A4AAED0C093AD2D74FB40466C4E6D3DD /* Pods-BJJ Buddy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BJJ Buddy.modulemap"; sourceTree = "<group>"; };
+		A8F904430A8D3CC8E504A907BDC97CC1 /* RAMAnimatedTabBarController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RAMAnimatedTabBarController.xcconfig; sourceTree = "<group>"; };
+		AE0ACC12A3F3DC26E964BB3FAEEFE41B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4C270C815D6DAB2CB85ECEFFD907416 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA6D1CF597CB82586FF668D18CA24765 /* Pods-BJJ BuddyTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BJJ BuddyTests-umbrella.h"; sourceTree = "<group>"; };
+		BD8CFE6315123B9A65DD46E0DB982855 /* Pods-BJJ Buddy-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BJJ Buddy-acknowledgements.plist"; sourceTree = "<group>"; };
+		C18A8F6E86791B7B65FF4B2BCCD766B2 /* Pods-BJJ BuddyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BJJ BuddyTests.release.xcconfig"; sourceTree = "<group>"; };
+		CD5D43E1D1534E4FB3A946B3C53E601A /* RAMBadge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMBadge.swift; path = RAMAnimatedTabBarController/RAMBadge/RAMBadge.swift; sourceTree = "<group>"; };
+		D03D9476B30E71AA602CABEB210D85FD /* RAMFrameItemAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMFrameItemAnimation.swift; path = RAMAnimatedTabBarController/Animations/FrameAnimation/RAMFrameItemAnimation.swift; sourceTree = "<group>"; };
+		E26756D25CC7493A1310A16E87D859C6 /* Pods-BJJ BuddyUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BJJ BuddyUITests-frameworks.sh"; sourceTree = "<group>"; };
+		E9375FD3602E319A57B3816A1A537521 /* Pods-BJJ BuddyUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BJJ BuddyUITests-dummy.m"; sourceTree = "<group>"; };
+		F7F54E5D479649044B648E65E2DC831F /* Pods-BJJ BuddyTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BJJ BuddyTests-resources.sh"; sourceTree = "<group>"; };
+		F91E6DF3D46EE8B74C446192F5470BD7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA8BB9645227B50F1AD42DD322BAEE9 /* Pods-BJJ BuddyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BJJ BuddyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FDA4C22F41D0B3444ABAFB87BE6D768F /* Pods-BJJ BuddyTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BJJ BuddyTests.modulemap"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		58AF332CA42C2CCDF03CA24BECF564DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5CA7449E631AB93ED75C0C1DD99AF1D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		606BCC1BEDBDEBC4EC865015A457B178 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22310FE8930C95CAAFAB685B4F73ABC6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7893D190181AC9C00639863EC599537 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBA7D8F61C055B2B7F8ACCBB7B7925E4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4B823A31A2A20608A2172A8FC6AC231 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DBCE65E748E62B0F949D4253D438751 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B378B61601228E13A7EE5D4C51E365E /* Pods-BJJ BuddyTests */ = {
+			isa = PBXGroup;
+			children = (
+				F91E6DF3D46EE8B74C446192F5470BD7 /* Info.plist */,
+				FDA4C22F41D0B3444ABAFB87BE6D768F /* Pods-BJJ BuddyTests.modulemap */,
+				8696FCCF700ADC7CAD8C9F68F0B13B2F /* Pods-BJJ BuddyTests-acknowledgements.markdown */,
+				7C6C067433CCBECD1EE19BBE0FE9D753 /* Pods-BJJ BuddyTests-acknowledgements.plist */,
+				A0A619BE19F1C3877A1D1FB539A9A2C0 /* Pods-BJJ BuddyTests-dummy.m */,
+				79933BA468CCC44A3EDB0740F67ED535 /* Pods-BJJ BuddyTests-frameworks.sh */,
+				F7F54E5D479649044B648E65E2DC831F /* Pods-BJJ BuddyTests-resources.sh */,
+				BA6D1CF597CB82586FF668D18CA24765 /* Pods-BJJ BuddyTests-umbrella.h */,
+				87771845AEBDADD02AA6E0F847C4392F /* Pods-BJJ BuddyTests.debug.xcconfig */,
+				C18A8F6E86791B7B65FF4B2BCCD766B2 /* Pods-BJJ BuddyTests.release.xcconfig */,
+			);
+			name = "Pods-BJJ BuddyTests";
+			path = "Target Support Files/Pods-BJJ BuddyTests";
+			sourceTree = "<group>";
+		};
+		585244801A64364E888A14CEBFEF5119 /* RAMAnimatedTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				8AA10CC6749899CDDF6CC2D8FD0D6A25 /* RAMAnimatedTabBarController.swift */,
+				3FBDB8E0CD3E6FA8C13AB15F70CD7936 /* RAMAnimatedTabBarController+BottomLine.swift */,
+				CD5D43E1D1534E4FB3A946B3C53E601A /* RAMBadge.swift */,
+				7E209E794A16F018B687CE0957FA015A /* RAMBounceAnimation.swift */,
+				D03D9476B30E71AA602CABEB210D85FD /* RAMFrameItemAnimation.swift */,
+				1BB4131A600DCD0D770B663D6CB8C120 /* RAMFumeAnimation.swift */,
+				4B4F7045D1681DC5EC7A65D6741A2DA3 /* RAMItemAnimationProtocol.swift */,
+				979ADF614DF1A97FE7756A4070A59038 /* RAMRotationAnimation.swift */,
+				5930E0E293313E90498EE50EC42CFA36 /* RAMTransitionItemAnimations.swift */,
+				A33557A04F550028897D3987D41CBA2A /* Support Files */,
+			);
+			name = RAMAnimatedTabBarController;
+			path = RAMAnimatedTabBarController;
+			sourceTree = "<group>";
+		};
+		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		77FC98F70480E6F1619F039A880BD13F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				585244801A64364E888A14CEBFEF5119 /* RAMAnimatedTabBarController */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7A0D865E906523C85D9277471ECD9F1C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				75349F03EC565C1E1F67C64926010353 /* Pods_BJJ_Buddy.framework */,
+				72B0829CA7F113C58733946B61763A41 /* Pods_BJJ_BuddyTests.framework */,
+				7985614763E52742BAF9A5E78755283F /* Pods_BJJ_BuddyUITests.framework */,
+				4BD8580DFCF4AF26E6B8D65EA9912476 /* RAMAnimatedTabBarController.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7C8FDA1311CE95A2E1EDA08D951BFA79 /* Pods-BJJ Buddy */ = {
+			isa = PBXGroup;
+			children = (
+				661285DAC61A769654BFB03AD6A201C3 /* Info.plist */,
+				A4AAED0C093AD2D74FB40466C4E6D3DD /* Pods-BJJ Buddy.modulemap */,
+				59BE9C424C7503F7C5B14DE9AE8BF548 /* Pods-BJJ Buddy-acknowledgements.markdown */,
+				BD8CFE6315123B9A65DD46E0DB982855 /* Pods-BJJ Buddy-acknowledgements.plist */,
+				631D55DCDC27E1058E5DB06C9FAF0193 /* Pods-BJJ Buddy-dummy.m */,
+				2D18E48B2B56DA12032A7F8C91BFDB4B /* Pods-BJJ Buddy-frameworks.sh */,
+				2AFB4CEF20BEFDF87FF223D9F60DFF41 /* Pods-BJJ Buddy-resources.sh */,
+				6BC6591990F6D6124F017229520C24C5 /* Pods-BJJ Buddy-umbrella.h */,
+				1C2A5F6A6995CF3452AD5020370F1101 /* Pods-BJJ Buddy.debug.xcconfig */,
+				3170116C4DBB3A7C88C1546DEF3ADEB2 /* Pods-BJJ Buddy.release.xcconfig */,
+			);
+			name = "Pods-BJJ Buddy";
+			path = "Target Support Files/Pods-BJJ Buddy";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				77FC98F70480E6F1619F039A880BD13F /* Pods */,
+				7A0D865E906523C85D9277471ECD9F1C /* Products */,
+				F878FD6D3C9B053AA429D2818174B7A2 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A33557A04F550028897D3987D41CBA2A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B4C270C815D6DAB2CB85ECEFFD907416 /* Info.plist */,
+				41A61E2389A42037CAAB2974B5E2C701 /* RAMAnimatedTabBarController.modulemap */,
+				A8F904430A8D3CC8E504A907BDC97CC1 /* RAMAnimatedTabBarController.xcconfig */,
+				A07C42425965EA21D735BD657B8FED55 /* RAMAnimatedTabBarController-dummy.m */,
+				96DB347EEB436F0A9F28EC9C7A5874A9 /* RAMAnimatedTabBarController-prefix.pch */,
+				A496F3829B8558F8915707A639305862 /* RAMAnimatedTabBarController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/RAMAnimatedTabBarController";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E0D919E635D23B70123790B8308F8EF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F10D9D6AF09B53A083686A9EE520CA3D /* Pods-BJJ BuddyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AE0ACC12A3F3DC26E964BB3FAEEFE41B /* Info.plist */,
+				10EBEBA19A2D6688E65C81C9C3471E80 /* Pods-BJJ BuddyUITests.modulemap */,
+				9B26F1F4F4C182718C50DCA272173C46 /* Pods-BJJ BuddyUITests-acknowledgements.markdown */,
+				688C9B14E44ED821501015235E5C4018 /* Pods-BJJ BuddyUITests-acknowledgements.plist */,
+				E9375FD3602E319A57B3816A1A537521 /* Pods-BJJ BuddyUITests-dummy.m */,
+				E26756D25CC7493A1310A16E87D859C6 /* Pods-BJJ BuddyUITests-frameworks.sh */,
+				5B474361985361B62D9CE4755F45B012 /* Pods-BJJ BuddyUITests-resources.sh */,
+				5A58403A2B4BBABF3F4C61AD9BA0F420 /* Pods-BJJ BuddyUITests-umbrella.h */,
+				FAA8BB9645227B50F1AD42DD322BAEE9 /* Pods-BJJ BuddyUITests.debug.xcconfig */,
+				60717CA6B7033F378D1520D3665677E4 /* Pods-BJJ BuddyUITests.release.xcconfig */,
+			);
+			name = "Pods-BJJ BuddyUITests";
+			path = "Target Support Files/Pods-BJJ BuddyUITests";
+			sourceTree = "<group>";
+		};
+		F878FD6D3C9B053AA429D2818174B7A2 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7C8FDA1311CE95A2E1EDA08D951BFA79 /* Pods-BJJ Buddy */,
+				4B378B61601228E13A7EE5D4C51E365E /* Pods-BJJ BuddyTests */,
+				F10D9D6AF09B53A083686A9EE520CA3D /* Pods-BJJ BuddyUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0468A5471473D4B5D0A9E61D07FF5949 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				174DBE4401B10A8BF5618E9ADAC5CD05 /* Pods-BJJ BuddyTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25C4BC5B63DB1AE694591E5DA4B913A1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				075E5EC9151C2E6B345F2251AD1984AC /* Pods-BJJ BuddyUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6176D17F18E18A80E1FC38C2F0E241C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC812D1017DC622947ECFE147C5A2B77 /* Pods-BJJ Buddy-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFA72AC5F155EAB6CAA8BE2DBE924AF0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5368F51755FF3B7B2B3759A7F4C86A1A /* RAMAnimatedTabBarController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		AE1E7D5515FDE26922A91AC4D049BEDD /* Pods-BJJ BuddyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20CAA0F7503E9C8DD30C2AD4365E0E63 /* Build configuration list for PBXNativeTarget "Pods-BJJ BuddyTests" */;
+			buildPhases = (
+				0468A5471473D4B5D0A9E61D07FF5949 /* Headers */,
+				EFFF1BF6F1FEAE6360D9515CAB7AFAD7 /* Sources */,
+				606BCC1BEDBDEBC4EC865015A457B178 /* Frameworks */,
+				139EF29E8C75458A596CBB0F6D927C38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16C7733D8BDBF9BF8D7DCFA1E7E02C98 /* PBXTargetDependency */,
+			);
+			name = "Pods-BJJ BuddyTests";
+			productName = "Pods-BJJ BuddyTests";
+			productReference = 72B0829CA7F113C58733946B61763A41 /* Pods_BJJ_BuddyTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AEE2CEE44CF7C71FBD1016E68C26EBB2 /* RAMAnimatedTabBarController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 477225A6989EEA572B4C2D5F9E468351 /* Build configuration list for PBXNativeTarget "RAMAnimatedTabBarController" */;
+			buildPhases = (
+				AFA72AC5F155EAB6CAA8BE2DBE924AF0 /* Headers */,
+				31EEF8112DE7A2075A9D934F45A82D02 /* Sources */,
+				E4B823A31A2A20608A2172A8FC6AC231 /* Frameworks */,
+				E35AC9528F7AF7ED677A0FF14601EF39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RAMAnimatedTabBarController;
+			productName = RAMAnimatedTabBarController;
+			productReference = 4BD8580DFCF4AF26E6B8D65EA9912476 /* RAMAnimatedTabBarController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D1F94C012022FCB2787C8FE27C1EB9AE /* Pods-BJJ BuddyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F8D8DF760ADEF333599376937E478CC /* Build configuration list for PBXNativeTarget "Pods-BJJ BuddyUITests" */;
+			buildPhases = (
+				25C4BC5B63DB1AE694591E5DA4B913A1 /* Headers */,
+				3CBF47431DC2C20E72BED3F49FAE83AD /* Sources */,
+				58AF332CA42C2CCDF03CA24BECF564DC /* Frameworks */,
+				0EBA943F20BAF4B439B3557CF2C84D6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3329E7CBD8A2E97CFB9927A486127245 /* PBXTargetDependency */,
+			);
+			name = "Pods-BJJ BuddyUITests";
+			productName = "Pods-BJJ BuddyUITests";
+			productReference = 7985614763E52742BAF9A5E78755283F /* Pods_BJJ_BuddyUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FC4AA4E0F60B33CD1C94F0BFAC2104C2 /* Pods-BJJ Buddy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 248790A61AAEC87523E8B4E58A5BE389 /* Build configuration list for PBXNativeTarget "Pods-BJJ Buddy" */;
+			buildPhases = (
+				A6176D17F18E18A80E1FC38C2F0E241C /* Headers */,
+				FDB9ECC0BABE37AB2569378193A24860 /* Sources */,
+				A7893D190181AC9C00639863EC599537 /* Frameworks */,
+				ACC3A6B4E3E35840DA651AE4251973D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F76697D2A1FE7DC0A164D24356C347B9 /* PBXTargetDependency */,
+			);
+			name = "Pods-BJJ Buddy";
+			productName = "Pods-BJJ Buddy";
+			productReference = 75349F03EC565C1E1F67C64926010353 /* Pods_BJJ_Buddy.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 7A0D865E906523C85D9277471ECD9F1C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC4AA4E0F60B33CD1C94F0BFAC2104C2 /* Pods-BJJ Buddy */,
+				AE1E7D5515FDE26922A91AC4D049BEDD /* Pods-BJJ BuddyTests */,
+				D1F94C012022FCB2787C8FE27C1EB9AE /* Pods-BJJ BuddyUITests */,
+				AEE2CEE44CF7C71FBD1016E68C26EBB2 /* RAMAnimatedTabBarController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0EBA943F20BAF4B439B3557CF2C84D6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		139EF29E8C75458A596CBB0F6D927C38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACC3A6B4E3E35840DA651AE4251973D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E35AC9528F7AF7ED677A0FF14601EF39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		31EEF8112DE7A2075A9D934F45A82D02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3380A48EDC6E57DEEE4A4CC96A555561 /* RAMAnimatedTabBarController+BottomLine.swift in Sources */,
+				5B577E3AA81A1BB477FA7AB497580B01 /* RAMAnimatedTabBarController-dummy.m in Sources */,
+				A336419CD11D47B0A4F54BE277FF7FAF /* RAMAnimatedTabBarController.swift in Sources */,
+				7E70AAA24C45B9C41AFB98730E0327AC /* RAMBadge.swift in Sources */,
+				4B4167D710A7A5C21344CDFFA7CB8733 /* RAMBounceAnimation.swift in Sources */,
+				A5E7CC41F4A5A818364B1BCB0040D75D /* RAMFrameItemAnimation.swift in Sources */,
+				BD38C6E6935E02C26AC1F814BF5BB998 /* RAMFumeAnimation.swift in Sources */,
+				A3E025B006BBAD0F684EFB60347C6813 /* RAMItemAnimationProtocol.swift in Sources */,
+				B3436F5DB83BBD9646F9A0AA7EF2D1EB /* RAMRotationAnimation.swift in Sources */,
+				8912D980A1A03F62FDEF9421562AC607 /* RAMTransitionItemAnimations.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CBF47431DC2C20E72BED3F49FAE83AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C574431201D386A9257C9376DBE727E /* Pods-BJJ BuddyUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFFF1BF6F1FEAE6360D9515CAB7AFAD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA943C32E2DF4C5C8B32107B90004270 /* Pods-BJJ BuddyTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDB9ECC0BABE37AB2569378193A24860 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F40C6951809AD3D41A4C4ED9BE35A06 /* Pods-BJJ Buddy-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		16C7733D8BDBF9BF8D7DCFA1E7E02C98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BJJ Buddy";
+			target = FC4AA4E0F60B33CD1C94F0BFAC2104C2 /* Pods-BJJ Buddy */;
+			targetProxy = 63184E988FEFDAE8AD6EAA49A46EE6D9 /* PBXContainerItemProxy */;
+		};
+		3329E7CBD8A2E97CFB9927A486127245 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BJJ Buddy";
+			target = FC4AA4E0F60B33CD1C94F0BFAC2104C2 /* Pods-BJJ Buddy */;
+			targetProxy = CB87CE0D77C3A43C97B3361ABFAD548A /* PBXContainerItemProxy */;
+		};
+		F76697D2A1FE7DC0A164D24356C347B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RAMAnimatedTabBarController;
+			target = AEE2CEE44CF7C71FBD1016E68C26EBB2 /* RAMAnimatedTabBarController */;
+			targetProxy = 6C9B4129D92420A23622D45AC21E590B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		007F1066051A467FBEB0038594E9D7C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		028E02AEA6A07B9EA888D02DAF423A16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C2A5F6A6995CF3452AD5020370F1101 /* Pods-BJJ Buddy.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BJJ Buddy/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BJJ Buddy/Pods-BJJ Buddy.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1BFA52CE915E4D5DC906E92E17FFBCC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3170116C4DBB3A7C88C1546DEF3ADEB2 /* Pods-BJJ Buddy.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BJJ Buddy/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BJJ Buddy/Pods-BJJ Buddy.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		34C50C05B671B324841F90B9BE47441C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60717CA6B7033F378D1520D3665677E4 /* Pods-BJJ BuddyUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BJJ BuddyUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BJJ BuddyUITests/Pods-BJJ BuddyUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3C6BB762F19F35DB34BCBFB60FDAAAFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87771845AEBDADD02AA6E0F847C4392F /* Pods-BJJ BuddyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BJJ BuddyTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BJJ BuddyTests/Pods-BJJ BuddyTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		884CA5C9D7E77B46373AF6336FF66B57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C18A8F6E86791B7B65FF4B2BCCD766B2 /* Pods-BJJ BuddyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BJJ BuddyTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BJJ BuddyTests/Pods-BJJ BuddyTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9E29B6904B61C488E1C48B84B6FC069D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8F904430A8D3CC8E504A907BDC97CC1 /* RAMAnimatedTabBarController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RAMAnimatedTabBarController/RAMAnimatedTabBarController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RAMAnimatedTabBarController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/RAMAnimatedTabBarController/RAMAnimatedTabBarController.modulemap";
+				PRODUCT_MODULE_NAME = RAMAnimatedTabBarController;
+				PRODUCT_NAME = RAMAnimatedTabBarController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A244B778FE52E36C817D1E8180BE3A1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAA8BB9645227B50F1AD42DD322BAEE9 /* Pods-BJJ BuddyUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BJJ BuddyUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BJJ BuddyUITests/Pods-BJJ BuddyUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B48BCDAB17543D866F46AE1B27785AD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8F904430A8D3CC8E504A907BDC97CC1 /* RAMAnimatedTabBarController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RAMAnimatedTabBarController/RAMAnimatedTabBarController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RAMAnimatedTabBarController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/RAMAnimatedTabBarController/RAMAnimatedTabBarController.modulemap";
+				PRODUCT_MODULE_NAME = RAMAnimatedTabBarController;
+				PRODUCT_NAME = RAMAnimatedTabBarController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E246FC26AF4A9832D7AA01080188D618 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20CAA0F7503E9C8DD30C2AD4365E0E63 /* Build configuration list for PBXNativeTarget "Pods-BJJ BuddyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C6BB762F19F35DB34BCBFB60FDAAAFA /* Debug */,
+				884CA5C9D7E77B46373AF6336FF66B57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		248790A61AAEC87523E8B4E58A5BE389 /* Build configuration list for PBXNativeTarget "Pods-BJJ Buddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				028E02AEA6A07B9EA888D02DAF423A16 /* Debug */,
+				1BFA52CE915E4D5DC906E92E17FFBCC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E246FC26AF4A9832D7AA01080188D618 /* Debug */,
+				007F1066051A467FBEB0038594E9D7C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		477225A6989EEA572B4C2D5F9E468351 /* Build configuration list for PBXNativeTarget "RAMAnimatedTabBarController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B48BCDAB17543D866F46AE1B27785AD0 /* Debug */,
+				9E29B6904B61C488E1C48B84B6FC069D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F8D8DF760ADEF333599376937E478CC /* Build configuration list for PBXNativeTarget "Pods-BJJ BuddyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A244B778FE52E36C817D1E8180BE3A1B /* Debug */,
+				34C50C05B671B324841F90B9BE47441C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
