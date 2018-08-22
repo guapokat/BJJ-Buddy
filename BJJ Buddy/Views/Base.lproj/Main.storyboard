@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Fake Journal-->
+        <!--Round Timer-->
         <scene sceneID="yZt-Wu-SNe">
             <objects>
                 <viewController id="4qa-xd-iES" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m0M-Uq-YNS"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Fake Journal" image="journalIcon" selectedImage="journalIcon" id="nh9-V3-1LI" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                    <tabBarItem key="tabBarItem" tag="1" title="Round Timer" image="timerIcon" selectedImage="timerIcon" id="nh9-V3-1LI" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <connections>
                             <outlet property="animation" destination="WOM-sK-Cui" id="gTG-6F-364"/>
                         </connections>
@@ -42,51 +42,130 @@
                 <customObject id="WOM-sK-Cui" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                            <real key="value" value="1"/>
+                            <real key="value" value="0.75"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="509.60000000000002" y="798.76847290640399"/>
+            <point key="canvasLocation" x="-1535" y="194"/>
         </scene>
-        <!--Journal-->
-        <scene sceneID="xn4-Lg-7un">
+        <!--Stats-->
+        <scene sceneID="U83-Ij-3Zd">
             <objects>
-                <viewController id="lIM-l9-luO" customClass="JournalViewController" customModule="BJJ_Buddy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="z3r-Fd-TxW">
+                <viewController id="R7M-SM-mSw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8ip-Fa-uKu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KfV-49-IxO">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BP8-NA-R7W">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <color key="backgroundColor" red="1" green="0.68292857392527029" blue="0.39463698307158512" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.47134253818873306" blue="0.69533522013314397" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="KfV-49-IxO" firstAttribute="top" secondItem="z3r-Fd-TxW" secondAttribute="top" id="BnQ-vT-K9d"/>
-                            <constraint firstItem="KfV-49-IxO" firstAttribute="leading" secondItem="z3r-Fd-TxW" secondAttribute="leading" id="OcH-7T-d2I"/>
-                            <constraint firstAttribute="trailing" secondItem="KfV-49-IxO" secondAttribute="trailing" id="fcb-jF-Jgl"/>
-                            <constraint firstAttribute="bottom" secondItem="KfV-49-IxO" secondAttribute="bottom" id="s9x-4R-9uc"/>
+                            <constraint firstItem="BP8-NA-R7W" firstAttribute="leading" secondItem="8ip-Fa-uKu" secondAttribute="leading" id="AcE-2u-LAI"/>
+                            <constraint firstAttribute="bottom" secondItem="BP8-NA-R7W" secondAttribute="bottom" id="Zfp-ep-SBg"/>
+                            <constraint firstAttribute="trailing" secondItem="BP8-NA-R7W" secondAttribute="trailing" id="aTE-9s-EVT"/>
+                            <constraint firstItem="BP8-NA-R7W" firstAttribute="top" secondItem="8ip-Fa-uKu" secondAttribute="top" id="dSv-Qn-1J4"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Yka-yZ-98U"/>
+                        <viewLayoutGuide key="safeArea" id="3tJ-lZ-u90"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Journal" image="journalIcon" selectedImage="journalIcon" id="NP8-l4-Ua9" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                    <tabBarItem key="tabBarItem" tag="2" title="Stats" image="statIcon" selectedImage="statIcon" id="DIu-hL-D1c" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <connections>
-                            <outlet property="animation" destination="AIu-ve-mcP" id="4O8-Qy-Kqk"/>
+                            <outlet property="animation" destination="mn8-kl-JwF" id="BMe-eE-OFJ"/>
                         </connections>
                     </tabBarItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CyE-7B-L2n" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="AIu-ve-mcP" customClass="RAMRightRotationAnimation" customModule="RAMAnimatedTabBarController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GDM-Iq-dE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="mn8-kl-JwF" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                            <real key="value" value="1"/>
+                            <real key="value" value="0.75"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="509.60000000000002" y="95.320197044334975"/>
+            <point key="canvasLocation" x="-1535" y="856"/>
+        </scene>
+        <!--More-->
+        <scene sceneID="lbx-Ra-wzH">
+            <objects>
+                <viewController id="LyA-Rq-AMN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XOm-1K-Iuo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PxD-Yu-YDr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" red="0.28940572610586057" green="1" blue="0.65809535823343268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PxD-Yu-YDr" firstAttribute="leading" secondItem="XOm-1K-Iuo" secondAttribute="leading" id="Jzz-xJ-QHT"/>
+                            <constraint firstItem="PxD-Yu-YDr" firstAttribute="top" secondItem="XOm-1K-Iuo" secondAttribute="top" id="Nl2-hg-CVe"/>
+                            <constraint firstAttribute="bottom" secondItem="PxD-Yu-YDr" secondAttribute="bottom" id="VcC-W1-T9g"/>
+                            <constraint firstAttribute="trailing" secondItem="PxD-Yu-YDr" secondAttribute="trailing" id="khF-PM-Oru"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="E7P-KM-RDv"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="3" title="More" image="moreIcon" selectedImage="moreIcon" id="XiL-43-d7f" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="epn-UD-UxN" id="5Rn-dh-rtR"/>
+                        </connections>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PSE-tz-NwW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="epn-UD-UxN" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                            <real key="value" value="0.75"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="-1535.2" y="1536.9458128078818"/>
+        </scene>
+        <!--Journal-->
+        <scene sceneID="FC3-7H-TvA">
+            <objects>
+                <tableViewController id="Ehs-b5-ErM" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1gI-QN-co7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ydF-Fs-55k">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ydF-Fs-55k" id="RY4-XW-IX3">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ehs-b5-ErM" id="srv-db-fq6"/>
+                            <outlet property="delegate" destination="Ehs-b5-ErM" id="W2m-9h-0Us"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Journal" image="journalIcon" selectedImage="journalIcon" id="CsN-0W-2JL" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="aZy-rA-cCM" id="IG7-vv-rzD"/>
+                        </connections>
+                    </tabBarItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P1v-cs-MFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="aZy-rA-cCM" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                            <real key="value" value="0.75"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="-1535" y="-497"/>
         </scene>
         <!--Animated Tab Bar Controller-->
         <scene sceneID="RG0-Ia-X57">
@@ -98,16 +177,21 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="lIM-l9-luO" kind="relationship" relationship="viewControllers" id="BE6-3K-dt0"/>
+                        <segue destination="Ehs-b5-ErM" kind="relationship" relationship="viewControllers" id="Ht9-fX-Ned"/>
                         <segue destination="4qa-xd-iES" kind="relationship" relationship="viewControllers" id="u07-rz-qIE"/>
+                        <segue destination="R7M-SM-mSw" kind="relationship" relationship="viewControllers" id="HsY-E0-1yP"/>
+                        <segue destination="LyA-Rq-AMN" kind="relationship" relationship="viewControllers" id="xPk-aE-B7d"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVU-TU-9qx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-818" y="572"/>
+            <point key="canvasLocation" x="-2577" y="682"/>
         </scene>
     </scenes>
     <resources>
         <image name="journalIcon" width="25" height="25"/>
+        <image name="moreIcon" width="25" height="25"/>
+        <image name="statIcon" width="25" height="25"/>
+        <image name="timerIcon" width="25" height="25"/>
     </resources>
 </document>

@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		61A0EAF4212D140E00E223AE /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A0EAF3212D140E00E223AE /* JournalViewController.swift */; };
+		61A0EAF7212DE14800E223AE /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61A0EAF6212DE14800E223AE /* Roboto-Bold.ttf */; };
+		61A0EAF9212DE24400E223AE /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61A0EAF8212DE24400E223AE /* Roboto-LightItalic.ttf */; };
+		61A0EAFB212DE24C00E223AE /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61A0EAFA212DE24C00E223AE /* Roboto-Light.ttf */; };
 		61B04910212CFFD900B5D45E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0490F212CFFD900B5D45E /* AppDelegate.swift */; };
 		61B04915212CFFD900B5D45E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61B04913212CFFD900B5D45E /* Main.storyboard */; };
 		61B04918212CFFD900B5D45E /* BJJ_Buddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 61B04916212CFFD900B5D45E /* BJJ_Buddy.xcdatamodeld */; };
@@ -41,7 +43,9 @@
 		0B6BEEBEBFCF1B2AD01A3A29 /* Pods-BJJ BuddyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BJJ BuddyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BJJ BuddyUITests/Pods-BJJ BuddyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3EA8FA4BCEA63F32638BFE37 /* Pods-BJJ BuddyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BJJ BuddyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BJJ BuddyTests/Pods-BJJ BuddyTests.release.xcconfig"; sourceTree = "<group>"; };
 		573BFC4D168EC722E6791BAD /* Pods-BJJ BuddyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BJJ BuddyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BJJ BuddyUITests/Pods-BJJ BuddyUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		61A0EAF3212D140E00E223AE /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
+		61A0EAF6212DE14800E223AE /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		61A0EAF8212DE24400E223AE /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		61A0EAFA212DE24C00E223AE /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		61B0490C212CFFD900B5D45E /* BJJ Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BJJ Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61B0490F212CFFD900B5D45E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61B04914212CFFD900B5D45E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -112,6 +116,16 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		61A0EAF5212DE12E00E223AE /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				61A0EAF6212DE14800E223AE /* Roboto-Bold.ttf */,
+				61A0EAF8212DE24400E223AE /* Roboto-LightItalic.ttf */,
+				61A0EAFA212DE24C00E223AE /* Roboto-Light.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		61B04903212CFFD800B5D45E = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +156,7 @@
 				61429764212D005000EB83FB /* Assets */,
 				61B0491E212CFFDB00B5D45E /* Info.plist */,
 				61B04916212CFFD900B5D45E /* BJJ_Buddy.xcdatamodeld */,
+				61A0EAF5212DE12E00E223AE /* Font */,
 			);
 			path = "BJJ Buddy";
 			sourceTree = "<group>";
@@ -168,7 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				61B0490F212CFFD900B5D45E /* AppDelegate.swift */,
-				61A0EAF3212D140E00E223AE /* JournalViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -302,6 +316,9 @@
 			files = (
 				61B0491D212CFFDB00B5D45E /* LaunchScreen.storyboard in Resources */,
 				61B0491A212CFFDB00B5D45E /* Assets.xcassets in Resources */,
+				61A0EAFB212DE24C00E223AE /* Roboto-Light.ttf in Resources */,
+				61A0EAF9212DE24400E223AE /* Roboto-LightItalic.ttf in Resources */,
+				61A0EAF7212DE14800E223AE /* Roboto-Bold.ttf in Resources */,
 				61B04915212CFFD900B5D45E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,7 +420,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				61B04918212CFFD900B5D45E /* BJJ_Buddy.xcdatamodeld in Sources */,
-				61A0EAF4212D140E00E223AE /* JournalViewController.swift in Sources */,
 				61B04910212CFFD900B5D45E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
