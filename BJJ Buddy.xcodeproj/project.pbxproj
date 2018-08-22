@@ -10,6 +10,10 @@
 		61A0EAF7212DE14800E223AE /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61A0EAF6212DE14800E223AE /* Roboto-Bold.ttf */; };
 		61A0EAF9212DE24400E223AE /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61A0EAF8212DE24400E223AE /* Roboto-LightItalic.ttf */; };
 		61A0EAFB212DE24C00E223AE /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61A0EAFA212DE24C00E223AE /* Roboto-Light.ttf */; };
+		61A0EAFD212DF49700E223AE /* JournalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A0EAFC212DF49700E223AE /* JournalTableViewController.swift */; };
+		61A0EAFF212E0D4600E223AE /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61A0EAFE212E0D4500E223AE /* Roboto-Regular.ttf */; };
+		61A0EB02212E104300E223AE /* AddEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A0EB01212E104300E223AE /* AddEntryVC.swift */; };
+		61A0EB04212E108800E223AE /* EditEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A0EB03212E108800E223AE /* EditEntryVC.swift */; };
 		61B04910212CFFD900B5D45E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0490F212CFFD900B5D45E /* AppDelegate.swift */; };
 		61B04915212CFFD900B5D45E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61B04913212CFFD900B5D45E /* Main.storyboard */; };
 		61B04918212CFFD900B5D45E /* BJJ_Buddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 61B04916212CFFD900B5D45E /* BJJ_Buddy.xcdatamodeld */; };
@@ -46,6 +50,10 @@
 		61A0EAF6212DE14800E223AE /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		61A0EAF8212DE24400E223AE /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
 		61A0EAFA212DE24C00E223AE /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		61A0EAFC212DF49700E223AE /* JournalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewController.swift; sourceTree = "<group>"; };
+		61A0EAFE212E0D4500E223AE /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		61A0EB01212E104300E223AE /* AddEntryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryVC.swift; sourceTree = "<group>"; };
+		61A0EB03212E108800E223AE /* EditEntryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEntryVC.swift; sourceTree = "<group>"; };
 		61B0490C212CFFD900B5D45E /* BJJ Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BJJ Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61B0490F212CFFD900B5D45E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61B04914212CFFD900B5D45E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,10 +128,20 @@
 			isa = PBXGroup;
 			children = (
 				61A0EAF6212DE14800E223AE /* Roboto-Bold.ttf */,
+				61A0EAFE212E0D4500E223AE /* Roboto-Regular.ttf */,
 				61A0EAF8212DE24400E223AE /* Roboto-LightItalic.ttf */,
 				61A0EAFA212DE24C00E223AE /* Roboto-Light.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		61A0EB00212E101A00E223AE /* JournalEntryControllers */ = {
+			isa = PBXGroup;
+			children = (
+				61A0EB01212E104300E223AE /* AddEntryVC.swift */,
+				61A0EB03212E108800E223AE /* EditEntryVC.swift */,
+			);
+			path = JournalEntryControllers;
 			sourceTree = "<group>";
 		};
 		61B04903212CFFD800B5D45E = {
@@ -182,7 +200,9 @@
 		61B04940212D000200B5D45E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				61A0EB00212E101A00E223AE /* JournalEntryControllers */,
 				61B0490F212CFFD900B5D45E /* AppDelegate.swift */,
+				61A0EAFC212DF49700E223AE /* JournalTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -315,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61B0491D212CFFDB00B5D45E /* LaunchScreen.storyboard in Resources */,
+				61A0EAFF212E0D4600E223AE /* Roboto-Regular.ttf in Resources */,
 				61B0491A212CFFDB00B5D45E /* Assets.xcassets in Resources */,
 				61A0EAFB212DE24C00E223AE /* Roboto-Light.ttf in Resources */,
 				61A0EAF9212DE24400E223AE /* Roboto-LightItalic.ttf in Resources */,
@@ -420,7 +441,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				61B04918212CFFD900B5D45E /* BJJ_Buddy.xcdatamodeld in Sources */,
+				61A0EAFD212DF49700E223AE /* JournalTableViewController.swift in Sources */,
 				61B04910212CFFD900B5D45E /* AppDelegate.swift in Sources */,
+				61A0EB04212E108800E223AE /* EditEntryVC.swift in Sources */,
+				61A0EB02212E104300E223AE /* AddEntryVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
