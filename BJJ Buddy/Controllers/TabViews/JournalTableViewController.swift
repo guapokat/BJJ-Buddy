@@ -13,14 +13,13 @@ class JournalTableViewController: UITableViewController {
     //MARK: - Variables
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var entries: [JournalEntry] = []
-    var selectedIndex: Int = 0
+    var selectedIndex: Int!
     
     //MARK: - Personal Functions
     func fetchData() {
         do {
             //Gathering from core data
             entries = try context.fetch(JournalEntry.fetchRequest())
-            
             //updating table
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -40,7 +39,7 @@ class JournalTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //TODO: - Look into cell height adjusting
     }
 }
 
@@ -51,20 +50,27 @@ extension JournalTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "entryCell", for: indexPath) as UITableViewCell
         let date = entries.reversed()[indexPath.row].date
-        let time = entries.reversed()[indexPath.row].time
-        
-    
+        //let time = entries.reversed()[indexPath.row].time
+        let entry = entries.reversed()[indexPath.row].entry
+        let trainingTime = entries.reversed()[indexPath.row].trainingTime
+        let rollingTime = entries.reversed()[indexPath.row].rollingTime
+
         cell.textLabel?.numberOfLines = 0
-        cell.textLabel?.text = entries.reversed()[indexPath.row].date
         
-        /*
-         Instead of checking for date and time here...need to check for round rolled entry
-         if it exists add "X rounds of X minutes"
-         The subtitle field will look like:
-         "X hrs - X rounds of X minutes"
-         */
-        if let date = date, let time = time {
-            cell.detailTextLabel?.text = "X hrs - X rounds of X minutes"
+        if let date = date, let entry = entry {
+            let entryBrief =  entry.prefix(30)
+            let titleString = date + "\t" + entryBrief + ".."
+            cell.textLabel?.text = titleString
+            
+            if trainingTime != 0 && rollingTime == 0 {
+                cell.detailTextLabel?.text = "Training time: \(trainingTime) Minutes"
+            } else if trainingTime == 0 && rollingTime != 0 {
+                cell.detailTextLabel?.text = "Rolling time: \(rollingTime) Minutes"
+            } else if trainingTime != 0 && rollingTime != 0 {
+                cell.detailTextLabel?.text = "Training time: \(trainingTime) Minutes | Rolling time: \(rollingTime) Minutes"
+            } else {
+                cell.detailTextLabel?.text = ""
+            }
         }
         
         return cell
@@ -78,12 +84,11 @@ extension JournalTableViewController {
         return 1
     }
     
-    //Editing
+    //Editing (allowing delete)
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let delete = UITableViewRowAction(style: .normal, title: "Delete"){
+        let delete = UITableViewRowAction(style: .default, title: "Delete"){
             (action, indexPath) in
-         let item = self.entries[indexPath.row]
-            
+            let item = self.entries.reversed()[indexPath.row]
             //deleting
             self.context.delete(item)
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
@@ -91,6 +96,8 @@ extension JournalTableViewController {
             //deleting locally
             self.entries.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            self.fetchData()
         }
         
         return [delete]
