@@ -51,17 +51,6 @@ class AddEntryVC: UIViewController, UITextViewDelegate {
         }
     }
     
-    
-    
-        //dismissing on return button
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if (text == "\n") {
-            textView.resignFirstResponder()
-            return false
-        }
-        return true
-    }
-    
         //dismissing on touch anywhere
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -144,7 +133,7 @@ class AddEntryVC: UIViewController, UITextViewDelegate {
     //MARK: - Personal Functions
     func presentMinutePickeralert(_ sendingVC: UIViewController) {
         
-        let alert = UIAlertController(style: .actionSheet, title: "Add Time", message: "How many minutes was training/class?")//, tintColor: <#T##UIColor?#>)
+        let alert = UIAlertController(style: .actionSheet, title: "Add Time", message: "How many minutes was training/class?")
         let minuteChoices = Array(15...180).map{ CGFloat($0) }
         let pickerViewValues: [[String]] = [minuteChoices.map{ Int($0).description }]
         let pickerViewSelectedValue: PickerViewViewController.Index = (column: 0, row: minuteChoices.index(of: 60) ?? 0)
@@ -154,7 +143,6 @@ class AddEntryVC: UIViewController, UITextViewDelegate {
             self.trainingMinutesLabel.text = "\(self.trainingTimeAmount!) Minutes"
             self.trainingMinutesLabel.isHidden = false
         }
-        
         
         alert.addAction(title: "Done", style: .cancel)
         sendingVC.present(alert, animated: true, completion: {
@@ -169,7 +157,7 @@ class AddEntryVC: UIViewController, UITextViewDelegate {
     
     func presentRollingPickerAlert(_ sendingVC: UIViewController) {
         
-        let alert = UIAlertController(style: .actionSheet, title: "Add Time", message: "How many minutes did you roll or spar for?")//, tintColor: <#T##UIColor?#>)
+        let alert = UIAlertController(style: .actionSheet, title: "Add Time", message: "How many minutes did you roll or spar for?")
         let minuteChoices = Array(15...180).map{ CGFloat($0) }
         let pickerViewValues: [[String]] = [minuteChoices.map{ Int($0).description }]
         let pickerViewSelectedValue: PickerViewViewController.Index = (column: 0, row: minuteChoices.index(of: 60) ?? 0)

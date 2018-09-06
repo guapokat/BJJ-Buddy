@@ -39,7 +39,15 @@ class JournalTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //TODO: - Look into cell height adjusting
+        
+        self.tableView.estimatedRowHeight = 44
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toEdit" {
+            let updateVC = segue.destination as! EditEntryVC
+            updateVC.entry = entries.reversed()[selectedIndex!]
+        }
     }
 }
 
@@ -58,7 +66,7 @@ extension JournalTableViewController {
         cell.textLabel?.numberOfLines = 0
         
         if let date = date, let entry = entry {
-            let entryBrief =  entry.prefix(30)
+            let entryBrief =  entry.prefix(99)
             let titleString = date + "\t" + entryBrief + ".."
             cell.textLabel?.text = titleString
             
