@@ -12,6 +12,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="DIGITALDREAM.ttf">
+            <string>Digitaldream</string>
+        </array>
+        <array key="DIGITALDREAMFAT.ttf">
+            <string>DigitaldreamFat</string>
+        </array>
         <array key="Roboto-Bold.ttf">
             <string>Roboto-Bold</string>
         </array>
@@ -32,257 +38,368 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xOC-zw-7jf">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="65" width="375" height="662"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="39e-4H-g7G">
-                                        <rect key="frame" x="12" y="41" width="351" height="676"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wla-to-BOF">
+                                        <rect key="frame" x="40" y="130" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="39e-4H-g7G">
+                                        <rect key="frame" x="12" y="0.66666666666668561" width="351" height="661.33333333333326"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Number Of Rounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isz-i2-dyg">
-                                                <rect key="frame" x="103.00000000000001" y="0.0" width="145.33333333333337" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="hlG-oO-OvA"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                        <size key="value" width="0.0" height="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <variation key="widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="33"/>
-                                                </variation>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="ZgR-N1-ysF">
-                                                <rect key="frame" x="134.66666666666666" y="35.999999999999993" width="81.666666666666657" height="119.33333333333331"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="50"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                        <size key="value" width="0.0" height="0.0"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <variation key="widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="105"/>
-                                                </variation>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Round Length" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvG-f7-SgU">
-                                                <rect key="frame" x="122.33333333333334" y="161.33333333333334" width="106.33333333333334" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="puh-fc-ctg"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                        <size key="value" width="0.0" height="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <variation key="widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="33"/>
-                                                </variation>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="1000" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="IRR-1r-IE3">
-                                                <rect key="frame" x="82.666666666666671" y="197.33333333333337" width="185.66666666666663" height="119"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZdE-aI-kVs" userLabel="Top">
+                                                <rect key="frame" x="0.0" y="0.0" width="351" height="326.66666666666669"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="79U-FJ-CdG">
-                                                        <rect key="frame" x="0.0" y="0.0" width="81.666666666666671" height="119"/>
-                                                        <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="50"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="5"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                                <size key="value" width="0.0" height="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <variation key="widthClass=regular">
-                                                            <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="105"/>
-                                                        </variation>
-                                                    </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01v-4g-wqZ">
-                                                        <rect key="frame" x="89.666666666666671" y="0.0" width="6.3333333333333286" height="119"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="26"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="K0n-hE-J5y">
-                                                        <rect key="frame" x="103.99999999999997" y="0.0" width="81.666666666666657" height="119"/>
-                                                        <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="50"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="5"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                                <size key="value" width="0.0" height="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <variation key="widthClass=regular">
-                                                            <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="105"/>
-                                                        </variation>
-                                                    </textField>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="owg-8B-Ixe">
+                                                        <rect key="frame" x="23.333333333333343" y="51.333333333333314" width="304.66666666666663" height="223"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Sp3-mu-Z7c" userLabel="Rounds">
+                                                                <rect key="frame" x="0.0" y="0.0" width="304.66666666666669" height="31"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Number Of Rounds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isz-i2-dyg">
+                                                                        <rect key="frame" x="0.0" y="7.3333333333333286" width="148.33333333333334" height="16.666666666666668"/>
+                                                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                                <size key="value" width="0.0" height="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <variation key="widthClass=regular">
+                                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="33"/>
+                                                                        </variation>
+                                                                    </label>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="ZgR-N1-ysF">
+                                                                        <rect key="frame" x="156.33333333333331" y="0.0" width="148.33333333333331" height="31"/>
+                                                                        <nil key="textColor"/>
+                                                                        <fontDescription key="fontDescription" name="Digitaldream" family="Digital dream" pointSize="26"/>
+                                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                                <size key="value" width="0.0" height="0.0"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <variation key="widthClass=regular">
+                                                                            <fontDescription key="fontDescription" name="Digitaldream" family="Digital dream" pointSize="75"/>
+                                                                        </variation>
+                                                                    </textField>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kSU-LL-k8J" userLabel="Round Duration">
+                                                                <rect key="frame" x="0.0" y="64" width="304.66666666666669" height="31"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Round Length" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yJ-pF-EY9">
+                                                                        <rect key="frame" x="0.0" y="7.3333333333333428" width="148.33333333333334" height="16.666666666666668"/>
+                                                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                                <size key="value" width="0.0" height="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <variation key="widthClass=regular">
+                                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="33"/>
+                                                                        </variation>
+                                                                    </label>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="1000" distribution="equalCentering" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="IRR-1r-IE3" userLabel="Round Clock">
+                                                                        <rect key="frame" x="156.33333333333331" y="0.0" width="148.33333333333331" height="31"/>
+                                                                        <subviews>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="79U-FJ-CdG">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="62.666666666666664" height="31"/>
+                                                                                <nil key="textColor"/>
+                                                                                <fontDescription key="fontDescription" name="Digitaldream" family="Digital dream" pointSize="26"/>
+                                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                        <real key="value" value="5"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                                        <size key="value" width="0.0" height="0.0"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <variation key="widthClass=regular">
+                                                                                    <fontDescription key="fontDescription" name="Digitaldream" family="Digital dream" pointSize="75"/>
+                                                                                </variation>
+                                                                            </textField>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01v-4g-wqZ">
+                                                                                <rect key="frame" x="63.666666666666686" y="0.0" width="21" height="31"/>
+                                                                                <fontDescription key="fontDescription" name="Digitaldream" family="Digital dream" pointSize="26"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="K0n-hE-J5y">
+                                                                                <rect key="frame" x="85.666666666666657" y="0.0" width="62.666666666666657" height="31"/>
+                                                                                <nil key="textColor"/>
+                                                                                <fontDescription key="fontDescription" name="Digitaldream" family="Digital dream" pointSize="26"/>
+                                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                        <real key="value" value="5"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                                        <size key="value" width="0.0" height="0.0"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <variation key="widthClass=regular">
+                                                                                    <fontDescription key="fontDescription" name="Digitaldream" family="Digital dream" pointSize="75"/>
+                                                                                </variation>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ft5-Vc-gvf" userLabel="Preperation">
+                                                                <rect key="frame" x="0.0" y="128" width="304.66666666666669" height="31"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Preperation Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvG-f7-SgU">
+                                                                        <rect key="frame" x="0.0" y="7.3333333333333428" width="148.33333333333334" height="16.666666666666668"/>
+                                                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                                <size key="value" width="0.0" height="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <variation key="widthClass=regular">
+                                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="33"/>
+                                                                        </variation>
+                                                                    </label>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="1000" distribution="equalCentering" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Euh-1u-NwI" userLabel="Prep Clock">
+                                                                        <rect key="frame" x="156.33333333333331" y="0.0" width="148.33333333333331" height="31"/>
+                                                                        <subviews>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="Hn4-S1-Gk5">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="62.666666666666664" height="31"/>
+                                                                                <nil key="textColor"/>
+                                                                                <fontDescription key="fontDescription" name="Digitaldream" family="Digital dream" pointSize="26"/>
+                                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                        <real key="value" value="5"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                                        <size key="value" width="0.0" height="0.0"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <variation key="widthClass=regular">
+                                                                                    <fontDescription key="fontDescription" name="Digitaldream" family="Digital dream" pointSize="75"/>
+                                                                                </variation>
+                                                                            </textField>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txf-BP-k5F">
+                                                                                <rect key="frame" x="63.666666666666686" y="0.0" width="21" height="31"/>
+                                                                                <fontDescription key="fontDescription" name="Digitaldream" family="Digital dream" pointSize="26"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="9gc-Pk-GRv">
+                                                                                <rect key="frame" x="85.666666666666657" y="0.0" width="62.666666666666657" height="31"/>
+                                                                                <nil key="textColor"/>
+                                                                                <fontDescription key="fontDescription" name="Digitaldream" family="Digital dream" pointSize="26"/>
+                                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                        <real key="value" value="5"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                                        <size key="value" width="0.0" height="0.0"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <variation key="widthClass=regular">
+                                                                                    <fontDescription key="fontDescription" name="Digitaldream" family="Digital dream" pointSize="75"/>
+                                                                                </variation>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8P5-dm-lbr" userLabel="Rest Duration">
+                                                                <rect key="frame" x="0.0" y="192" width="304.66666666666669" height="31"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Rest Interval" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLM-Wa-FZi">
+                                                                        <rect key="frame" x="0.0" y="7.3333333333333144" width="148.33333333333334" height="16.666666666666668"/>
+                                                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                                <size key="value" width="0.0" height="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <variation key="widthClass=regular">
+                                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="33"/>
+                                                                        </variation>
+                                                                    </label>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="1000" distribution="equalCentering" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="2K4-kw-eub" userLabel="Rest Clock">
+                                                                        <rect key="frame" x="156.33333333333331" y="0.0" width="148.33333333333331" height="31"/>
+                                                                        <subviews>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="lOi-0f-yma">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="62.666666666666664" height="31"/>
+                                                                                <nil key="textColor"/>
+                                                                                <fontDescription key="fontDescription" name="Digitaldream" family="Digital dream" pointSize="26"/>
+                                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                        <real key="value" value="5"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                                        <size key="value" width="0.0" height="0.0"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <variation key="widthClass=regular">
+                                                                                    <fontDescription key="fontDescription" name="Digitaldream" family="Digital dream" pointSize="75"/>
+                                                                                </variation>
+                                                                            </textField>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9A-ck-DYf">
+                                                                                <rect key="frame" x="63.666666666666686" y="0.0" width="21" height="31"/>
+                                                                                <fontDescription key="fontDescription" name="Digitaldream" family="Digital dream" pointSize="26"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="Vep-B4-rLb">
+                                                                                <rect key="frame" x="85.666666666666657" y="0.0" width="62.666666666666657" height="31"/>
+                                                                                <nil key="textColor"/>
+                                                                                <fontDescription key="fontDescription" name="Digitaldream" family="Digital dream" pointSize="26"/>
+                                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                        <real key="value" value="5"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                                        <size key="value" width="0.0" height="0.0"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <variation key="widthClass=regular">
+                                                                                    <fontDescription key="fontDescription" name="Digitaldream" family="Digital dream" pointSize="75"/>
+                                                                                </variation>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="Sp3-mu-Z7c" secondAttribute="trailing" id="GAx-qi-Gno"/>
+                                                            <constraint firstItem="Sp3-mu-Z7c" firstAttribute="leading" secondItem="owg-8B-Ixe" secondAttribute="leading" id="oTO-ub-JdW"/>
+                                                        </constraints>
+                                                    </stackView>
                                                 </subviews>
-                                            </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Rest Interval" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLM-Wa-FZi">
-                                                <rect key="frame" x="127.33333333333334" y="322.33333333333331" width="96.666666666666657" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="cZ1-Af-JbT"/>
+                                                    <constraint firstItem="owg-8B-Ixe" firstAttribute="centerX" secondItem="ZdE-aI-kVs" secondAttribute="centerX" id="Fhm-0T-VFF"/>
+                                                    <constraint firstItem="owg-8B-Ixe" firstAttribute="centerY" secondItem="ZdE-aI-kVs" secondAttribute="centerY" id="SzM-Kd-1up"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                        <size key="value" width="0.0" height="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <variation key="widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="33"/>
-                                                </variation>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="1000" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2K4-kw-eub">
-                                                <rect key="frame" x="82.666666666666671" y="358.33333333333331" width="185.66666666666663" height="119.33333333333331"/>
+                                            </view>
+                                            <view contentMode="scaleAspectFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="UHt-Wj-J3m" userLabel="Bottom">
+                                                <rect key="frame" x="0.0" y="334.66666666666663" width="351" height="326.66666666666663"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="lOi-0f-yma">
-                                                        <rect key="frame" x="0.0" y="0.0" width="81.666666666666671" height="119.33333333333333"/>
-                                                        <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="50"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="5"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                                <size key="value" width="0.0" height="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <variation key="widthClass=regular">
-                                                            <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="105"/>
-                                                        </variation>
-                                                    </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9A-ck-DYf">
-                                                        <rect key="frame" x="89.666666666666671" y="0.0" width="6.3333333333333286" height="119.33333333333333"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="26"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="Vep-B4-rLb">
-                                                        <rect key="frame" x="103.99999999999997" y="0.0" width="81.666666666666657" height="119.33333333333333"/>
-                                                        <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="50"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="5"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                                <size key="value" width="0.0" height="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <variation key="widthClass=regular">
-                                                            <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="105"/>
-                                                        </variation>
-                                                    </textField>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="qs4-R8-Rc7" userLabel="Buttons">
+                                                        <rect key="frame" x="33" y="127.00000000000006" width="285" height="72"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTa-Wr-bi2">
+                                                                <rect key="frame" x="0.0" y="0.0" width="285" height="30"/>
+                                                                <color key="backgroundColor" red="0.44757424439999999" green="0.91372549020000005" blue="0.4662038993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                                <state key="normal" title="Start">
+                                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="100"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <variation key="widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="23"/>
+                                                                </variation>
+                                                                <connections>
+                                                                    <action selector="startPressed:" destination="4qa-xd-iES" eventType="touchUpInside" id="aQI-GW-X4B"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYx-jp-ibR">
+                                                                <rect key="frame" x="0.0" y="42" width="285" height="30"/>
+                                                                <color key="backgroundColor" red="0.87450980389999999" green="0.2901960784" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                                <state key="normal" title="Clear">
+                                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="100"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <variation key="widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="23"/>
+                                                                </variation>
+                                                                <connections>
+                                                                    <action selector="clearPressed:" destination="4qa-xd-iES" eventType="touchUpInside" id="r6n-hg-fco"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="ZDF-L2-dE0" userLabel="Buttons">
-                                                <rect key="frame" x="13" y="483.66666666666657" width="325" height="192.33333333333331"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTa-Wr-bi2">
-                                                        <rect key="frame" x="0.0" y="0.0" width="325" height="94.666666666666671"/>
-                                                        <color key="backgroundColor" red="0.44757424439999999" green="0.91372549020000005" blue="0.4662038993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
-                                                        <state key="normal" title="Start">
-                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="5"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <variation key="widthClass=regular">
-                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="23"/>
-                                                        </variation>
-                                                        <connections>
-                                                            <action selector="startPressed:" destination="4qa-xd-iES" eventType="touchUpInside" id="aQI-GW-X4B"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYx-jp-ibR">
-                                                        <rect key="frame" x="0.0" y="97.666666666666742" width="325" height="94.666666666666686"/>
-                                                        <color key="backgroundColor" red="0.87450980389999999" green="0.2901960784" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
-                                                        <state key="normal" title="Clear">
-                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="5"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <variation key="widthClass=regular">
-                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="23"/>
-                                                        </variation>
-                                                        <connections>
-                                                            <action selector="clearPressed:" destination="4qa-xd-iES" eventType="touchUpInside" id="r6n-hg-fco"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <variation key="widthClass=regular" spacing="24"/>
-                                            </stackView>
+                                                <constraints>
+                                                    <constraint firstItem="qs4-R8-Rc7" firstAttribute="leading" secondItem="UHt-Wj-J3m" secondAttribute="leading" constant="33" id="Ujd-3i-Zv1"/>
+                                                    <constraint firstAttribute="trailing" secondItem="qs4-R8-Rc7" secondAttribute="trailing" constant="33" id="hY3-P5-ftB"/>
+                                                    <constraint firstItem="qs4-R8-Rc7" firstAttribute="centerY" secondItem="UHt-Wj-J3m" secondAttribute="centerY" id="knS-jj-gSz"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="ZDF-L2-dE0" secondAttribute="trailing" constant="13" id="IQM-VZ-h2P"/>
-                                            <constraint firstItem="ZDF-L2-dE0" firstAttribute="leading" secondItem="39e-4H-g7G" secondAttribute="leading" constant="13" id="JPQ-PX-Vzq"/>
+                                            <constraint firstItem="UHt-Wj-J3m" firstAttribute="leading" secondItem="39e-4H-g7G" secondAttribute="leading" id="RYF-EJ-ydC"/>
+                                            <constraint firstItem="ZdE-aI-kVs" firstAttribute="leading" secondItem="39e-4H-g7G" secondAttribute="leading" id="SpL-k7-bEY"/>
+                                            <constraint firstAttribute="trailing" secondItem="UHt-Wj-J3m" secondAttribute="trailing" id="jXl-6M-xd5"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZdE-aI-kVs" secondAttribute="trailing" id="uwn-q6-7nL"/>
                                         </constraints>
                                         <variation key="heightClass=regular-widthClass=regular" spacing="25"/>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.87450980389999999" green="0.90196078430000004" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="39e-4H-g7G" secondAttribute="trailing" constant="12" id="ClJ-Am-7vI"/>
-                                    <constraint firstItem="39e-4H-g7G" firstAttribute="top" secondItem="xOC-zw-7jf" secondAttribute="top" constant="41" id="dOw-Aa-nzz"/>
+                                    <constraint firstItem="39e-4H-g7G" firstAttribute="top" secondItem="xOC-zw-7jf" secondAttribute="top" id="R27-ZL-Gzb"/>
+                                    <constraint firstAttribute="bottom" secondItem="39e-4H-g7G" secondAttribute="bottom" id="lcf-UX-xGH"/>
                                     <constraint firstItem="39e-4H-g7G" firstAttribute="leading" secondItem="xOC-zw-7jf" secondAttribute="leading" constant="12" id="nVP-t1-h2X"/>
-                                    <constraint firstAttribute="bottom" secondItem="39e-4H-g7G" secondAttribute="bottom" constant="95" id="s4h-bd-Dae"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="xOC-zw-7jf" firstAttribute="top" secondItem="m0M-Uq-YNS" secondAttribute="top" constant="21" id="GtZ-zZ-xfo"/>
                             <constraint firstItem="xOC-zw-7jf" firstAttribute="leading" secondItem="eqU-q8-nyD" secondAttribute="leading" id="T70-Id-Iyp"/>
-                            <constraint firstAttribute="bottom" secondItem="xOC-zw-7jf" secondAttribute="bottom" id="TIB-Ef-xHO"/>
+                            <constraint firstItem="m0M-Uq-YNS" firstAttribute="bottom" secondItem="xOC-zw-7jf" secondAttribute="bottom" constant="2" id="T8G-IG-ywW"/>
                             <constraint firstItem="xOC-zw-7jf" firstAttribute="trailing" secondItem="eqU-q8-nyD" secondAttribute="trailing" id="hLV-I9-v5e"/>
-                            <constraint firstItem="xOC-zw-7jf" firstAttribute="top" secondItem="eqU-q8-nyD" secondAttribute="top" id="iHv-jA-bu1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m0M-Uq-YNS"/>
                     </view>
@@ -297,9 +414,11 @@
                         <outlet property="startButton" destination="KTa-Wr-bi2" id="aBF-HT-OKJ"/>
                         <outletCollection property="roundLength" destination="79U-FJ-CdG" collectionClass="NSMutableArray" id="EZ9-jH-886"/>
                         <outletCollection property="roundLength" destination="K0n-hE-J5y" collectionClass="NSMutableArray" id="Hxb-ky-6Qd"/>
+                        <outletCollection property="prepTime" destination="Hn4-S1-Gk5" collectionClass="NSMutableArray" id="Co3-0r-sFr"/>
+                        <outletCollection property="prepTime" destination="9gc-Pk-GRv" collectionClass="NSMutableArray" id="XQo-hc-y0d"/>
                         <outletCollection property="restInterval" destination="lOi-0f-yma" collectionClass="NSMutableArray" id="Y3i-jN-wPM"/>
                         <outletCollection property="restInterval" destination="Vep-B4-rLb" collectionClass="NSMutableArray" id="4IU-fh-G5O"/>
-                        <segue destination="XCe-eU-zjL" kind="presentation" identifier="toTimer" id="7IU-HA-ONT"/>
+                        <segue destination="XCe-eU-zjL" kind="show" identifier="toTimer" id="7IU-HA-ONT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y9J-mw-bbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -311,7 +430,7 @@
                     </userDefinedRuntimeAttributes>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="-1535.625" y="192.5"/>
+            <point key="canvasLocation" x="-1536.8" y="192.11822660098522"/>
         </scene>
         <!--TimerVC-->
         <scene sceneID="VS0-X2-Ud1">
@@ -328,9 +447,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
                                 <size key="titleShadowOffset" width="0.0" height="1"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <state key="normal" title="Cancel"/>
                                 <variation key="widthClass=regular">
                                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="21"/>
                                 </variation>
@@ -343,12 +460,12 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WP0-8l-W0v" userLabel="Timer">
-                                <rect key="frame" x="12" y="347.66666666666669" width="351" height="117"/>
+                                <rect key="frame" x="12" y="366" width="351" height="80"/>
                                 <subviews>
-                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="00" borderStyle="roundedRect" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="t3Z-LL-gCO">
-                                        <rect key="frame" x="0.0" y="0.0" width="166" height="117"/>
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="00" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3Z-LL-gCO">
+                                        <rect key="frame" x="0.0" y="0.0" width="165" height="80"/>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="175"/>
+                                        <fontDescription key="fontDescription" name="DigitaldreamFat" family="Digital dream Fat" pointSize="175"/>
                                         <textInputTraits key="textInputTraits" textContentType="postal-code"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -362,28 +479,31 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="135"/>
+                                            <fontDescription key="fontDescription" name="DigitaldreamFat" family="Digital dream Fat" pointSize="135"/>
                                         </variation>
                                         <variation key="heightClass=compact-widthClass=compact">
-                                            <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="125"/>
+                                            <fontDescription key="fontDescription" name="DigitaldreamFat" family="Digital dream Fat" pointSize="118"/>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
-                                            <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="99"/>
+                                            <fontDescription key="fontDescription" name="DigitaldreamFat" family="Digital dream Fat" pointSize="73"/>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="225"/>
+                                            <fontDescription key="fontDescription" name="DigitaldreamFat" family="Digital dream Fat" pointSize="183"/>
                                         </variation>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6n-sg-i8e">
-                                        <rect key="frame" x="166" y="19.666666666666629" width="16" height="77.666666666666671"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="66"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6n-sg-i8e">
+                                        <rect key="frame" x="165" y="28.666666666666686" width="17.666666666666657" height="23"/>
+                                        <fontDescription key="fontDescription" name="Digitaldream" family="Digital dream" pointSize="22"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Digitaldream" family="Digital dream" pointSize="85"/>
+                                        </variation>
                                     </label>
-                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="00" borderStyle="roundedRect" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AN1-FQ-nFW">
-                                        <rect key="frame" x="182" y="0.0" width="169" height="117"/>
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="00" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AN1-FQ-nFW">
+                                        <rect key="frame" x="182.66666666666663" y="0.0" width="168.33333333333337" height="80"/>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="175"/>
+                                        <fontDescription key="fontDescription" name="DigitaldreamFat" family="Digital dream Fat" pointSize="175"/>
                                         <textInputTraits key="textInputTraits" textContentType="postal-code"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
@@ -394,22 +514,22 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="135"/>
+                                            <fontDescription key="fontDescription" name="DigitaldreamFat" family="Digital dream Fat" pointSize="135"/>
                                         </variation>
                                         <variation key="heightClass=compact-widthClass=compact">
-                                            <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="125"/>
+                                            <fontDescription key="fontDescription" name="DigitaldreamFat" family="Digital dream Fat" pointSize="118"/>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
-                                            <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="99"/>
+                                            <fontDescription key="fontDescription" name="DigitaldreamFat" family="Digital dream Fat" pointSize="73"/>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="225"/>
+                                            <fontDescription key="fontDescription" name="DigitaldreamFat" family="Digital dream Fat" pointSize="183"/>
                                         </variation>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="tfO-70-BDR" userLabel="Buttons">
-                                <rect key="frame" x="12" y="476.66666666666674" width="351" height="85"/>
+                                <rect key="frame" x="12" y="458" width="351" height="85"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WsK-P0-Y6B">
                                         <rect key="frame" x="0.0" y="0.0" width="351" height="38"/>
@@ -433,29 +553,59 @@
                                             <action selector="startButtonPressed:" destination="XCe-eU-zjL" eventType="touchUpInside" id="r1F-Ft-AXq"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2i3-JC-gBj">
-                                        <rect key="frame" x="0.0" y="46.999999999999943" width="351" height="38"/>
-                                        <color key="backgroundColor" red="0.87450980389999999" green="0.2901960784" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="22"/>
-                                        <state key="normal" title="Stop">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="0.25"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <variation key="heightClass=compact-widthClass=compact">
-                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="36"/>
-                                        </variation>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="tuS-DK-7jP">
+                                        <rect key="frame" x="0.0" y="47" width="351" height="38"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2i3-JC-gBj">
+                                                <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="38"/>
+                                                <color key="backgroundColor" red="0.87450980389999999" green="0.2901960784" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="22"/>
+                                                <state key="normal" title="Stop">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="0.25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="36"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="stopPressed:" destination="XCe-eU-zjL" eventType="touchUpInside" id="FGc-vk-gS1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hiw-bD-zch">
+                                                <rect key="frame" x="178.66666666666663" y="0.0" width="172.33333333333337" height="38"/>
+                                                <color key="backgroundColor" red="0.035294117649999998" green="0.51764705879999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="22"/>
+                                                <state key="normal" title="Reset">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="0.25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="36"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="resetPressed:" destination="XCe-eU-zjL" eventType="touchUpInside" id="ucX-9e-1q6"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Round 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0C-tx-5HR">
-                                <rect key="frame" x="104" y="238.66666666666663" width="167" height="54"/>
+                                <rect key="frame" x="104" y="257" width="167" height="54"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="45"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -490,10 +640,10 @@
                             <constraint firstItem="WP0-8l-W0v" firstAttribute="top" secondItem="z0C-tx-5HR" secondAttribute="bottom" constant="3" id="a7d-Gk-QoU">
                                 <variation key="heightClass=compact" constant="25"/>
                             </constraint>
-                            <constraint firstItem="tfO-70-BDR" firstAttribute="leading" secondItem="IDK-nn-zNC" secondAttribute="leading" constant="12" id="cUp-e9-yhk"/>
                             <constraint firstAttribute="bottom" secondItem="tfO-70-BDR" secondAttribute="bottom" constant="21" id="cqC-6b-L7B"/>
                             <constraint firstItem="WP0-8l-W0v" firstAttribute="centerX" secondItem="4qf-D1-a1E" secondAttribute="centerX" id="em5-Bd-TBg"/>
                             <constraint firstItem="IDK-nn-zNC" firstAttribute="trailing" secondItem="Nte-uE-zCW" secondAttribute="trailing" constant="21" id="lBl-H3-hBC"/>
+                            <constraint firstItem="tfO-70-BDR" firstAttribute="centerX" secondItem="4qf-D1-a1E" secondAttribute="centerX" id="luN-j1-5cD"/>
                             <constraint firstItem="tfO-70-BDR" firstAttribute="top" secondItem="WP0-8l-W0v" secondAttribute="bottom" constant="12" id="mRk-ZG-e3n"/>
                             <constraint firstItem="IDK-nn-zNC" firstAttribute="trailing" secondItem="WP0-8l-W0v" secondAttribute="trailing" constant="12" id="oag-9c-DHV"/>
                             <constraint firstItem="z0C-tx-5HR" firstAttribute="centerX" secondItem="4qf-D1-a1E" secondAttribute="centerX" id="ow0-Au-gaW"/>
@@ -536,7 +686,6 @@
                                 <include reference="Tqd-w0-R2w"/>
                                 <include reference="a7d-Gk-QoU"/>
                                 <include reference="Xif-LN-PnZ"/>
-                                <exclude reference="cUp-e9-yhk"/>
                                 <include reference="cqC-6b-L7B"/>
                             </mask>
                         </variation>
@@ -585,17 +734,122 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BP8-NA-R7W">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <color key="backgroundColor" red="1" green="0.47134253818873306" blue="0.69533522013314397" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Stats" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaO-xz-deJ">
+                                <rect key="frame" x="12" y="50" width="168" height="44.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="37"/>
+                                <color key="textColor" red="0.1764705882" green="0.20392156859999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="bqr-yp-qrY">
+                                <rect key="frame" x="12" y="106.66666666666666" width="351" height="84.666666666666657"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tp7-w7-UY8" userLabel="class/training">
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="16.666666666666668"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Total Class/Training Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcd-Jg-r2x">
+                                                <rect key="frame" x="0.0" y="0.0" width="161.66666666666666" height="16.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                                <color key="textColor" red="0.1764705882" green="0.20392156859999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="trainingTimeLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwM-oH-rOX">
+                                                <rect key="frame" x="161.66666666666663" y="0.0" width="189.33333333333337" height="16.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="14"/>
+                                                <color key="textColor" red="0.1764705882" green="0.20392156859999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5R6-5w-GJi" userLabel="rolling/sparring">
+                                        <rect key="frame" x="0.0" y="22.666666666666671" width="351" height="16.666666666666671"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Total Rolling/Sparring Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rs9-9H-B6W">
+                                                <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="16.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                                <color key="textColor" red="0.1764705882" green="0.20392156859999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="rollingTimeLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z87-kB-Yij">
+                                                <rect key="frame" x="172.66666666666663" y="0.0" width="178.33333333333337" height="16.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="14"/>
+                                                <color key="textColor" red="0.1764705882" green="0.20392156859999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6y-TV-pkf" userLabel="rounds rolled">
+                                        <rect key="frame" x="0.0" y="45.333333333333329" width="351" height="16.666666666666671"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Total Rounds Rolled" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2l-sk-yq9">
+                                                <rect key="frame" x="0.0" y="0.0" width="125.66666666666667" height="16.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                                <color key="textColor" red="0.1764705882" green="0.20392156859999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="roundsRolledLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfn-Ck-zDE">
+                                                <rect key="frame" x="125.66666666666664" y="0.0" width="225.33333333333337" height="16.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="14"/>
+                                                <color key="textColor" red="0.1764705882" green="0.20392156859999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NMe-Yg-HfF" userLabel="rounds rolled">
+                                        <rect key="frame" x="0.0" y="67.999999999999986" width="351" height="16.666666666666671"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Number of Journal Entries" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ipv-me-cMS">
+                                                <rect key="frame" x="0.0" y="0.0" width="165.66666666666666" height="16.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                                <color key="textColor" red="0.1764705882" green="0.20392156859999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="journalEntrylabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyb-HI-HCO">
+                                                <rect key="frame" x="165.66666666666663" y="0.0" width="185.33333333333337" height="16.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="14"/>
+                                                <color key="textColor" red="0.1764705882" green="0.20392156859999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="N6y-TV-pkf" firstAttribute="leading" secondItem="bqr-yp-qrY" secondAttribute="leading" id="1gg-Gw-Etu"/>
+                                    <constraint firstItem="5R6-5w-GJi" firstAttribute="leading" secondItem="bqr-yp-qrY" secondAttribute="leading" id="3fQ-qe-mJZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="NMe-Yg-HfF" secondAttribute="trailing" id="DIQ-5c-OIT"/>
+                                    <constraint firstItem="Tp7-w7-UY8" firstAttribute="leading" secondItem="bqr-yp-qrY" secondAttribute="leading" id="JaD-Ea-uDd"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tp7-w7-UY8" secondAttribute="trailing" id="Tjy-l5-RRD"/>
+                                    <constraint firstAttribute="trailing" secondItem="N6y-TV-pkf" secondAttribute="trailing" id="c0u-2I-ofN"/>
+                                    <constraint firstAttribute="trailing" secondItem="5R6-5w-GJi" secondAttribute="trailing" id="qEZ-JO-dXM"/>
+                                    <constraint firstItem="NMe-Yg-HfF" firstAttribute="leading" secondItem="bqr-yp-qrY" secondAttribute="leading" id="wH7-Wo-lTY"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="BP8-NA-R7W" firstAttribute="leading" secondItem="8ip-Fa-uKu" secondAttribute="leading" id="AcE-2u-LAI"/>
-                            <constraint firstAttribute="bottom" secondItem="BP8-NA-R7W" secondAttribute="bottom" id="Zfp-ep-SBg"/>
-                            <constraint firstAttribute="trailing" secondItem="BP8-NA-R7W" secondAttribute="trailing" id="aTE-9s-EVT"/>
-                            <constraint firstItem="BP8-NA-R7W" firstAttribute="top" secondItem="8ip-Fa-uKu" secondAttribute="top" id="dSv-Qn-1J4"/>
+                            <constraint firstItem="IaO-xz-deJ" firstAttribute="leading" secondItem="3tJ-lZ-u90" secondAttribute="leading" constant="12" id="6iy-AA-sN2"/>
+                            <constraint firstItem="bqr-yp-qrY" firstAttribute="leading" secondItem="3tJ-lZ-u90" secondAttribute="leading" constant="12" id="A7u-8b-AKy"/>
+                            <constraint firstItem="bqr-yp-qrY" firstAttribute="centerX" secondItem="8ip-Fa-uKu" secondAttribute="centerX" id="FrU-oh-RAj"/>
+                            <constraint firstItem="3tJ-lZ-u90" firstAttribute="trailing" secondItem="bqr-yp-qrY" secondAttribute="trailing" constant="12" id="U0Q-nS-9uJ"/>
+                            <constraint firstItem="bqr-yp-qrY" firstAttribute="top" secondItem="IaO-xz-deJ" secondAttribute="bottom" constant="12" id="nJt-Lj-hky"/>
+                            <constraint firstItem="IaO-xz-deJ" firstAttribute="top" secondItem="3tJ-lZ-u90" secondAttribute="top" constant="6" id="y4S-tV-sT1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3tJ-lZ-u90"/>
                     </view>

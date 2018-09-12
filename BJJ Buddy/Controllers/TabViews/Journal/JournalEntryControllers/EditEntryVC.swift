@@ -22,6 +22,7 @@ class EditEntryVC: UIViewController {
     var entry: JournalEntry!
     var trainingTime: Int?
     var rollingTime: Int?
+    var numberOfRounds: Int?
     
     //MARK: - System Functions
     override func viewDidLoad() {
@@ -59,7 +60,7 @@ class EditEntryVC: UIViewController {
             trainingTimeSwitch.isOn = true
         }
         if entry.rollingTime != 0 {
-            rollingTimeLabel.text = "\(entry.rollingTime) Minutes"
+            rollingTimeLabel.text = "\(entry.numberOfRounds) Rounds of \(entry.rollingTime) Minutes"
             rollingTimeLabel.isHidden = false
             rollingTimeSwitch.isOn = true
         }
@@ -87,28 +88,50 @@ class EditEntryVC: UIViewController {
         })
     }
     
-    func presentRollingPickerAlert(_ sendingVC: UIViewController) {
+    func presentRollingPickerAlertFirst(_ sendingVC: UIViewController) {
         
-        let alert = UIAlertController(style: .actionSheet, title: "Add Time", message: "How many minutes did you roll or spar for?")
-        let minuteChoices = Array(15...180).map{ CGFloat($0) }
+        let alert = UIAlertController(style: .actionSheet, title: "Add Rounds", message: "How many rounds did you roll/spar for?")
+        let roundChoices = Array(1...10).map{ CGFloat($0) }
+        let pickerViewValues: [[String]] = [roundChoices.map{ Int($0).description }]
+        let pickerViewSelectedValue: PickerViewViewController.Index = (column: 0, row: roundChoices.index(of: 5) ?? 0)
+        
+        alert.addPickerView(values: pickerViewValues, initialSelection: pickerViewSelectedValue) { vc, picker, index, values in
+            self.numberOfRounds = Int(roundChoices[index.row])
+        }
+        
+        alert.addAction(title: "Done", style: .default, handler: { action in
+            if self.numberOfRounds == nil {
+                self.numberOfRounds = 5
+            }
+            self.presentRollingPickerAlertSecond(self)
+        })
+        sendingVC.present(alert, animated: true, completion: {})
+
+    }
+    
+    func presentRollingPickerAlertSecond(_ sendingVC: UIViewController) {
+        let alert = UIAlertController(style: .actionSheet, title: "Add Time", message: "How many minutes per round?")
+        let minuteChoices = Array(1...9).map{ CGFloat($0) }
         let pickerViewValues: [[String]] = [minuteChoices.map{ Int($0).description }]
-        let pickerViewSelectedValue: PickerViewViewController.Index = (column: 0, row: minuteChoices.index(of: 60) ?? 0)
+        let pickerViewSelectedValue: PickerViewViewController.Index = (column: 0, row: minuteChoices.index(of: 5) ?? 0)
         
         alert.addPickerView(values: pickerViewValues, initialSelection: pickerViewSelectedValue) { vc, picker, index, values in
             self.rollingTime = Int(minuteChoices[index.row])
-            self.rollingTimeLabel.text = "\(self.rollingTime!) Minutes"
-            self.rollingTimeLabel.isHidden = false
         }
         
-        alert.addAction(title: "Done", style: .cancel)
-        sendingVC.present(alert, animated: true, completion: {
-            if self.rollingTimeLabel.isHidden {
-                self.rollingTime = 60
-                self.rollingTimeLabel.text = "\(self.rollingTime!) Minutes"
-                self.rollingTimeLabel.isHidden = false
+        alert.addAction(title: "Done", style: .default, handler:  { action in
+            if self.rollingTime == nil {
+                self.rollingTime = 5
             }
+            self.updateRollingLabel(numberOfRounds: self.numberOfRounds!, timePerRound: self.rollingTime!)
+            
         })
-        
+        sendingVC.present(alert, animated: true, completion: {})
+    }
+
+    func updateRollingLabel(numberOfRounds: Int, timePerRound: Int) {
+        self.rollingTimeLabel.text = "\(numberOfRounds) Rounds of \(timePerRound) Minutes"
+        self.rollingTimeLabel.isHidden = false
     }
     
     //MARK: - ACTIONS
@@ -128,7 +151,7 @@ class EditEntryVC: UIViewController {
     
     @IBAction func rollingTimeToggled(_ sender: UISwitch) {
         if sender.isOn {
-            presentRollingPickerAlert(self)
+            presentRollingPickerAlertFirst(self)
         } else {
             rollingTimeLabel.isHidden = true
             rollingTime = 0
@@ -151,6 +174,9 @@ class EditEntryVC: UIViewController {
             }
             if let rollTime = rollingTime {
                 entry.rollingTime = Int16(rollTime)
+            }
+            if let rounds = numberOfRounds {
+                entry.numberOfRounds = Int16(rounds)
             }
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             

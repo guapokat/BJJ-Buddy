@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6117ED08213E37A2007999AB /* keyboardDoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6117ED07213E37A2007999AB /* keyboardDoneButton.swift */; };
+		613127422142D9FD007864FC /* DIGITALDREAM.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 613127402142D9F9007864FC /* DIGITALDREAM.ttf */; };
+		613127432142D9FD007864FC /* DIGITALDREAMFAT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 613127412142D9FB007864FC /* DIGITALDREAMFAT.ttf */; };
 		61826167213384ED00F4F1A9 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61826118213384ED00F4F1A9 /* Array+Extensions.swift */; };
 		61826168213384ED00F4F1A9 /* UISegmentedControl+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61826119213384ED00F4F1A9 /* UISegmentedControl+Extensions.swift */; };
 		61826169213384ED00F4F1A9 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6182611A213384ED00F4F1A9 /* UIImageView+Extensions.swift */; };
@@ -77,6 +79,8 @@
 		61B04933212CFFDB00B5D45E /* BJJ_BuddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B04932212CFFDB00B5D45E /* BJJ_BuddyUITests.swift */; };
 		61BC7EA82141752A0043803F /* TimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BC7EA72141752A0043803F /* TimerVC.swift */; };
 		61BC7EAA2141789D0043803F /* RoundTimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BC7EA92141789D0043803F /* RoundTimerVC.swift */; };
+		61F6852A2148518200D7B239 /* roundStart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 61F685292148518200D7B239 /* roundStart.mp3 */; };
+		61F6852C2148522600D7B239 /* warning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 61F6852B2148522600D7B239 /* warning.mp3 */; };
 		77306310ECF8331CBEBB065D /* Pods_BJJ_BuddyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB14C67D2EE144B00070C80A /* Pods_BJJ_BuddyTests.framework */; };
 		B87862A640A3BC0E7FB0EE67 /* Pods_BJJ_Buddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4CB5BF4DDB53B1ACCA38A4 /* Pods_BJJ_Buddy.framework */; };
 		CAFD2320770167ADCE8740F9 /* Pods_BJJ_BuddyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBC8EEA16FFE84616D83A646 /* Pods_BJJ_BuddyUITests.framework */; };
@@ -104,6 +108,8 @@
 		3EA8FA4BCEA63F32638BFE37 /* Pods-BJJ BuddyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BJJ BuddyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BJJ BuddyTests/Pods-BJJ BuddyTests.release.xcconfig"; sourceTree = "<group>"; };
 		573BFC4D168EC722E6791BAD /* Pods-BJJ BuddyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BJJ BuddyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BJJ BuddyUITests/Pods-BJJ BuddyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6117ED07213E37A2007999AB /* keyboardDoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keyboardDoneButton.swift; sourceTree = "<group>"; };
+		613127402142D9F9007864FC /* DIGITALDREAM.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DIGITALDREAM.ttf; sourceTree = "<group>"; };
+		613127412142D9FB007864FC /* DIGITALDREAMFAT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DIGITALDREAMFAT.ttf; sourceTree = "<group>"; };
 		61826118213384ED00F4F1A9 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		61826119213384ED00F4F1A9 /* UISegmentedControl+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Extensions.swift"; sourceTree = "<group>"; };
 		6182611A213384ED00F4F1A9 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
@@ -179,6 +185,8 @@
 		61B04934212CFFDB00B5D45E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61BC7EA72141752A0043803F /* TimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerVC.swift; sourceTree = "<group>"; };
 		61BC7EA92141789D0043803F /* RoundTimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTimerVC.swift; sourceTree = "<group>"; };
+		61F685292148518200D7B239 /* roundStart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = roundStart.mp3; sourceTree = "<group>"; };
+		61F6852B2148522600D7B239 /* warning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = warning.mp3; sourceTree = "<group>"; };
 		8A58A5AEF19B0C74B7C1984B /* Pods-BJJ Buddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BJJ Buddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-BJJ Buddy/Pods-BJJ Buddy.release.xcconfig"; sourceTree = "<group>"; };
 		9A4CB5BF4DDB53B1ACCA38A4 /* Pods_BJJ_Buddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BJJ_Buddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6CA26ACC6EDB48ABD6AA71B /* Pods-BJJ Buddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BJJ Buddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BJJ Buddy/Pods-BJJ Buddy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -239,8 +247,9 @@
 		61826113213381DE00F4F1A9 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				61F6852D21485AD600D7B239 /* Sounds */,
 				61826116213384ED00F4F1A9 /* Source */,
-				61A0EAF5212DE12E00E223AE /* Font */,
+				61A0EAF5212DE12E00E223AE /* Fonts */,
 			);
 			path = External;
 			sourceTree = "<group>";
@@ -522,15 +531,17 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		61A0EAF5212DE12E00E223AE /* Font */ = {
+		61A0EAF5212DE12E00E223AE /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				613127402142D9F9007864FC /* DIGITALDREAM.ttf */,
+				613127412142D9FB007864FC /* DIGITALDREAMFAT.ttf */,
 				61A0EAF6212DE14800E223AE /* Roboto-Bold.ttf */,
 				61A0EAFE212E0D4500E223AE /* Roboto-Regular.ttf */,
 				61A0EAF8212DE24400E223AE /* Roboto-LightItalic.ttf */,
 				61A0EAFA212DE24C00E223AE /* Roboto-Light.ttf */,
 			);
-			path = Font;
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		61A0EB00212E101A00E223AE /* JournalEntryControllers */ = {
@@ -545,10 +556,28 @@
 		61A0EB052133783100E223AE /* TabViews */ = {
 			isa = PBXGroup;
 			children = (
-				61A0EAFC212DF49700E223AE /* JournalTableViewController.swift */,
-				61BC7EA92141789D0043803F /* RoundTimerVC.swift */,
+				61AFA6782145907D00060270 /* Journal */,
+				61AFA6772145905B00060270 /* Timer */,
 			);
 			path = TabViews;
+			sourceTree = "<group>";
+		};
+		61AFA6772145905B00060270 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				61BC7EA92141789D0043803F /* RoundTimerVC.swift */,
+				61BC7EA72141752A0043803F /* TimerVC.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		61AFA6782145907D00060270 /* Journal */ = {
+			isa = PBXGroup;
+			children = (
+				61A0EAFC212DF49700E223AE /* JournalTableViewController.swift */,
+				61A0EB00212E101A00E223AE /* JournalEntryControllers */,
+			);
+			path = Journal;
 			sourceTree = "<group>";
 		};
 		61B04903212CFFD800B5D45E = {
@@ -609,9 +638,7 @@
 			isa = PBXGroup;
 			children = (
 				61B0490F212CFFD900B5D45E /* AppDelegate.swift */,
-				61BC7EA72141752A0043803F /* TimerVC.swift */,
 				61A0EB052133783100E223AE /* TabViews */,
-				61A0EB00212E101A00E223AE /* JournalEntryControllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -631,6 +658,15 @@
 				6117ED07213E37A2007999AB /* keyboardDoneButton.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		61F6852D21485AD600D7B239 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				61F685292148518200D7B239 /* roundStart.mp3 */,
+				61F6852B2148522600D7B239 /* warning.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		E57530DC32C60C3FE8E6C68F /* Frameworks */ = {
@@ -753,12 +789,16 @@
 			files = (
 				61B0491D212CFFDB00B5D45E /* LaunchScreen.storyboard in Resources */,
 				61A0EAFF212E0D4600E223AE /* Roboto-Regular.ttf in Resources */,
+				61F6852A2148518200D7B239 /* roundStart.mp3 in Resources */,
+				61F6852C2148522600D7B239 /* warning.mp3 in Resources */,
 				61B0491A212CFFDB00B5D45E /* Assets.xcassets in Resources */,
 				61A0EAFB212DE24C00E223AE /* Roboto-Light.ttf in Resources */,
 				6182617A213384ED00F4F1A9 /* Countries.bundle in Resources */,
 				61A0EAF9212DE24400E223AE /* Roboto-LightItalic.ttf in Resources */,
 				61A0EAF7212DE14800E223AE /* Roboto-Bold.ttf in Resources */,
+				613127432142D9FD007864FC /* DIGITALDREAMFAT.ttf in Resources */,
 				61B04915212CFFD900B5D45E /* Main.storyboard in Resources */,
+				613127422142D9FD007864FC /* DIGITALDREAM.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -841,10 +881,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BJJ Buddy/Pods-BJJ Buddy-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftySound/SwiftySound.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMAnimatedTabBarController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftySound.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

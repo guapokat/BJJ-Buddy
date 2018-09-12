@@ -58,24 +58,24 @@ extension JournalTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "entryCell", for: indexPath) as UITableViewCell
         let date = entries.reversed()[indexPath.row].date
-        //let time = entries.reversed()[indexPath.row].time
         let entry = entries.reversed()[indexPath.row].entry
         let trainingTime = entries.reversed()[indexPath.row].trainingTime
-        let rollingTime = entries.reversed()[indexPath.row].rollingTime
+        let timePerRound = entries.reversed()[indexPath.row].rollingTime
+        let rounds = entries.reversed()[indexPath.row].numberOfRounds
 
         cell.textLabel?.numberOfLines = 0
         
         if let date = date, let entry = entry {
             let entryBrief =  entry.prefix(99)
-            let titleString = date + "\t" + entryBrief + ".."
+            let titleString = date + "\t" + entryBrief + "..."
             cell.textLabel?.text = titleString
             
-            if trainingTime != 0 && rollingTime == 0 {
-                cell.detailTextLabel?.text = "Training time: \(trainingTime) Minutes"
-            } else if trainingTime == 0 && rollingTime != 0 {
-                cell.detailTextLabel?.text = "Rolling time: \(rollingTime) Minutes"
-            } else if trainingTime != 0 && rollingTime != 0 {
-                cell.detailTextLabel?.text = "Training time: \(trainingTime) Minutes | Rolling time: \(rollingTime) Minutes"
+            if trainingTime != 0 && timePerRound == 0 {
+                cell.detailTextLabel?.text = "Training: \(trainingTime) Minutes"
+            } else if trainingTime == 0 && timePerRound != 0 {
+                cell.detailTextLabel?.text = "Rolled: \(rounds) round(s) of \(timePerRound) min(s)"
+            } else if trainingTime != 0 && timePerRound != 0 {
+                cell.detailTextLabel?.text = "Training: \(trainingTime) Minutes | Rolled: \(rounds) round(s) of \(timePerRound) min(s)"
             } else {
                 cell.detailTextLabel?.text = ""
             }

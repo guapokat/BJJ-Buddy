@@ -1,16 +1,20 @@
 PODS:
   - RAMAnimatedTabBarController (3.5.0)
+  - SwiftySound (1.0.0)
 
 DEPENDENCIES:
   - RAMAnimatedTabBarController
+  - SwiftySound
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - RAMAnimatedTabBarController
+    - SwiftySound
 
 SPEC CHECKSUMS:
   RAMAnimatedTabBarController: 7e259e89b669c7bc833a6441c7d8fbfd6580f473
+  SwiftySound: b9c3370956fd4ed65ed79d45563070077a50a2cd
 
-PODFILE CHECKSUM: d30293565ecae6e20216f2ad1c1481190c5849da
+PODFILE CHECKSUM: 5be9b5b5b3c6bc471c24cb58517fb82b348385c9
 
 COCOAPODS: 1.5.3
