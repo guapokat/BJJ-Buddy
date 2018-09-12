@@ -33,19 +33,28 @@ class StatsVC: UIViewController {
     //MARK: - LIFECYCLE FUNCTIONS
     override func viewWillAppear(_ animated: Bool) {
         fetchData()
-        if checkIfEmpty() {
-            totalTrainingTimeLabel.text = "N/A"
-            totalRollingTimeLabel.text = "N/A"
-            totalRestTimeLabel.text = "N/A"
-            totalRoundsRolledLabel.text = "N/A"
-            totalJournalEntriesLabel.text = "N/A"
-            averageWordsPerEntryLabel.text = "N/A"
-        } else {
+        let emptyCheck = checkIfEmpty()
+        switch emptyCheck {
+        case 0:
+            updateDisplay()
+//            totalTrainingTimeLabel.text = "N/A"
+//            totalRollingTimeLabel.text = "N/A"
+//            totalRestTimeLabel.text = "N/A"
+//            totalRoundsRolledLabel.text = "N/A"
+//            totalJournalEntriesLabel.text = "N/A"
+//            averageWordsPerEntryLabel.text = "N/A"
+        case 1:
+            configureUserEntityStats()
+            updateDisplay()
+        case 2:
+            configureJournalEntryStats()
+            
+            updateDisplay()
+        default:
             configureJournalEntryStats()
             configureUserEntityStats()
             updateDisplay()
         }
-        
     }
     
     override func viewDidLoad() {
@@ -65,11 +74,15 @@ class StatsVC: UIViewController {
         totalJournalEntries = 0
         averageWordsPerEntry = 0
     }
-    func checkIfEmpty() -> Bool {
+    func checkIfEmpty() -> Int {
         if users.isEmpty && entries.isEmpty {
-            return true
+            return 0 //no user & no entries
+        } else if entries.isEmpty && !users.isEmpty {
+            return 1 //no entries but has user
+        } else if !entries.isEmpty && users.isEmpty {
+            return 2 //entries with no user
         } else {
-            return false
+            return 3 //both present
         }
     }
     
@@ -108,23 +121,34 @@ class StatsVC: UIViewController {
     func updateDisplay() {
         if totalTrainingTime != 0 {
             totalTrainingTimeLabel.text = makeTimeString(forTime: totalTrainingTime)
+        } else {
+            totalTrainingTimeLabel.text = "N/A"
         }
         if totalRollingTime != 0 {
             totalRollingTimeLabel.text = makeTimeString(forTime: totalRollingTime)
+        } else {
+            totalRollingTimeLabel.text = "N/A"
         }
         if totalRestTime != 0 {
             totalRestTimeLabel.text = makeTimeString(forTime: totalRestTime)
+        } else {
+            totalRestTimeLabel.text = "N/A"
         }
         if totalRoundsRolled != 0 {
             totalRoundsRolledLabel.text = "\(totalRoundsRolled)"
+        } else {
+            totalRoundsRolledLabel.text = "N/A"
         }
         if totalJournalEntries != 0 {
             totalJournalEntriesLabel.text = "\(totalJournalEntries)"
+        } else {
+            totalJournalEntriesLabel.text = "N/A"
         }
         if averageWordsPerEntry != 0 {
             averageWordsPerEntryLabel.text = "\(averageWordsPerEntry)"
+        } else {
+            averageWordsPerEntryLabel.text = "N/A"
         }
-        
     }
     
     func makeTimeString(forTime: Int) -> String {
