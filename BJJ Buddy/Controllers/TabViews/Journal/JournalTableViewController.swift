@@ -15,7 +15,7 @@ class JournalTableViewController: UITableViewController {
     var entries: [JournalEntry] = []
     var selectedIndex: Int!
     
-    //MARK: - Personal Functions
+    //MARK: - CUSTOM FUNCTIONS
     func fetchData() {
         do {
             //Gathering from core data
