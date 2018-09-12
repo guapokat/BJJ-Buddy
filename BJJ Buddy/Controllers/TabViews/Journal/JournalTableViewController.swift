@@ -51,7 +51,6 @@ class JournalTableViewController: UITableViewController {
     }
 }
 
-
 //MARK: - Table
 extension JournalTableViewController {
     

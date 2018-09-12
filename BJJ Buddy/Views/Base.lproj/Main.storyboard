@@ -1022,22 +1022,159 @@
         <!--More-->
         <scene sceneID="lbx-Ra-wzH">
             <objects>
-                <viewController id="LyA-Rq-AMN" sceneMemberID="viewController">
+                <viewController id="LyA-Rq-AMN" customClass="MoreVC" customModule="BJJ_Buddy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XOm-1K-Iuo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PxD-Yu-YDr">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <color key="backgroundColor" red="0.28940572610586057" green="1" blue="0.65809535823343268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="More" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kD-TX-rVp">
+                                <rect key="frame" x="12" y="65" width="84" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="GGX-cC-Ue9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="37"/>
+                                <color key="textColor" red="0.1764705882" green="0.20392156859999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Oa4-nW-Kff" userLabel="Delete Buttons">
+                                <rect key="frame" x="82" y="246" width="210" height="109"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WdX-G0-zY7">
+                                        <rect key="frame" x="0.0" y="0.0" width="210" height="31"/>
+                                        <color key="backgroundColor" red="0.87450980389999999" green="0.2901960784" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="KEx-td-TaG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                        <state key="normal" title="Delete Journal Entries">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="23"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="clearPressed:" destination="4qa-xd-iES" eventType="touchUpInside" id="QmZ-NR-lel"/>
+                                            <action selector="deleteJournalEntriesButton:" destination="LyA-Rq-AMN" eventType="touchUpInside" id="lE6-cV-Jcr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPv-m9-Oar">
+                                        <rect key="frame" x="0.0" y="39" width="210" height="31"/>
+                                        <color key="backgroundColor" red="0.87450980389999999" green="0.2901960784" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                        <state key="normal" title="Delete Timer Stats">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="23"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="clearPressed:" destination="4qa-xd-iES" eventType="touchUpInside" id="doo-9W-aFU"/>
+                                            <action selector="deleteTimerStatsButton:" destination="LyA-Rq-AMN" eventType="touchUpInside" id="v66-wM-bFq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MT-EJ-r9V">
+                                        <rect key="frame" x="0.0" y="78" width="210" height="31"/>
+                                        <color key="backgroundColor" red="0.87450980389999999" green="0.2901960784" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                        <state key="normal" title="Delete All Stats">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="23"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="clearPressed:" destination="4qa-xd-iES" eventType="touchUpInside" id="ww1-RD-NAL"/>
+                                            <action selector="deleteAllButton:" destination="LyA-Rq-AMN" eventType="touchUpInside" id="leV-bm-5AP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="VPv-m9-Oar" firstAttribute="height" secondItem="WdX-G0-zY7" secondAttribute="height" id="6gx-ZF-AcM"/>
+                                    <constraint firstAttribute="width" constant="210" id="RfA-pI-IhZ"/>
+                                    <constraint firstItem="6MT-EJ-r9V" firstAttribute="height" secondItem="WdX-G0-zY7" secondAttribute="height" id="qDv-tI-kZw"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gJD-aI-GsH" userLabel="Belt Color">
+                                <rect key="frame" x="21" y="139" width="333" height="41"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="White" translatesAutoresizingMaskIntoConstraints="NO" id="JQZ-Vz-1W2">
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="26o-1A-5WD"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="250" text="White Belt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNn-yu-Uoa">
+                                        <rect key="frame" x="63" y="0.0" width="137" height="41"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1z-9E-Bqt">
+                                        <rect key="frame" x="208" y="0.0" width="125" height="41"/>
+                                        <color key="backgroundColor" red="0.0" green="0.72156862749999995" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="125" id="yGq-kP-TRm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                        <state key="normal" title="Belt Color">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="23"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="beltColorButton:" destination="LyA-Rq-AMN" eventType="touchUpInside" id="LjW-my-0VT"/>
+                                            <action selector="startPressed:" destination="4qa-xd-iES" eventType="touchUpInside" id="jK0-Bw-wET"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="JQZ-Vz-1W2" firstAttribute="top" secondItem="gJD-aI-GsH" secondAttribute="top" id="Gmb-m5-CQq"/>
+                                    <constraint firstAttribute="height" constant="41" id="Y8L-FM-h8f"/>
+                                    <constraint firstAttribute="bottom" secondItem="JQZ-Vz-1W2" secondAttribute="bottom" id="zkT-c3-oOZ"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="PxD-Yu-YDr" firstAttribute="leading" secondItem="XOm-1K-Iuo" secondAttribute="leading" id="Jzz-xJ-QHT"/>
-                            <constraint firstItem="PxD-Yu-YDr" firstAttribute="top" secondItem="XOm-1K-Iuo" secondAttribute="top" id="Nl2-hg-CVe"/>
-                            <constraint firstAttribute="bottom" secondItem="PxD-Yu-YDr" secondAttribute="bottom" id="VcC-W1-T9g"/>
-                            <constraint firstAttribute="trailing" secondItem="PxD-Yu-YDr" secondAttribute="trailing" id="khF-PM-Oru"/>
+                            <constraint firstItem="E7P-KM-RDv" firstAttribute="trailing" secondItem="gJD-aI-GsH" secondAttribute="trailing" constant="21" id="Bhf-dn-PI2"/>
+                            <constraint firstItem="2kD-TX-rVp" firstAttribute="leading" secondItem="E7P-KM-RDv" secondAttribute="leading" constant="12" id="Bys-fx-lhR"/>
+                            <constraint firstItem="Oa4-nW-Kff" firstAttribute="top" secondItem="gJD-aI-GsH" secondAttribute="bottom" constant="66" id="I7C-6b-pCa"/>
+                            <constraint firstItem="Oa4-nW-Kff" firstAttribute="centerX" secondItem="XOm-1K-Iuo" secondAttribute="centerX" id="IyB-Nl-yfX"/>
+                            <constraint firstItem="gJD-aI-GsH" firstAttribute="leading" secondItem="E7P-KM-RDv" secondAttribute="leading" constant="21" id="Pzw-7d-kGa"/>
+                            <constraint firstItem="gJD-aI-GsH" firstAttribute="centerX" secondItem="XOm-1K-Iuo" secondAttribute="centerX" id="Tyx-CK-xq4"/>
+                            <constraint firstItem="2kD-TX-rVp" firstAttribute="top" secondItem="E7P-KM-RDv" secondAttribute="top" constant="21" id="ZBS-KO-KI5"/>
+                            <constraint firstItem="gJD-aI-GsH" firstAttribute="top" secondItem="2kD-TX-rVp" secondAttribute="bottom" constant="39" id="kOI-YR-yWk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="E7P-KM-RDv"/>
                     </view>
@@ -1046,6 +1183,10 @@
                             <outlet property="animation" destination="epn-UD-UxN" id="5Rn-dh-rtR"/>
                         </connections>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="beltColorImage" destination="JQZ-Vz-1W2" id="OFe-zw-7d3"/>
+                        <outlet property="beltColorLabel" destination="LNn-yu-Uoa" id="A3j-ze-jRn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PSE-tz-NwW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="epn-UD-UxN" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController">
@@ -1541,6 +1682,7 @@
     </scenes>
     <resources>
         <image name="AppIcon2" width="512" height="512"/>
+        <image name="White" width="110" height="42"/>
         <image name="journalIcon" width="25" height="25"/>
         <image name="moreIcon" width="25" height="25"/>
         <image name="statIcon" width="25" height="25"/>

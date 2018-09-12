@@ -133,7 +133,7 @@ class AddEntryVC: UIViewController, UITextViewDelegate {
         dismiss(animated: true, completion: nil)
     }
     
-    //MARK: - Personal Functions
+    //MARK: - CUSTOM FUNCTIONS
     func presentMinutePickeralert(_ sendingVC: UIViewController) {
         
         let alert = UIAlertController(style: .actionSheet, title: "Add Time", message: "How many minutes was training/class?")
@@ -147,7 +147,7 @@ class AddEntryVC: UIViewController, UITextViewDelegate {
             self.trainingMinutesLabel.isHidden = false
         }
         
-        alert.addAction(title: "Done", style: .cancel)
+        alert.addAction(title: "Done", style: .default)
         sendingVC.present(alert, animated: true, completion: {
             if self.trainingMinutesLabel.isHidden {
                 self.trainingTimeAmount = 60

@@ -11,6 +11,7 @@
 		612A44E22148CA79008C7DCA /* StatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612A44E12148CA79008C7DCA /* StatsVC.swift */; };
 		613127422142D9FD007864FC /* DIGITALDREAM.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 613127402142D9F9007864FC /* DIGITALDREAM.ttf */; };
 		613127432142D9FD007864FC /* DIGITALDREAMFAT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 613127412142D9FB007864FC /* DIGITALDREAMFAT.ttf */; };
+		616DBA92214992E300F6B961 /* MoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616DBA91214992E300F6B961 /* MoreVC.swift */; };
 		61826167213384ED00F4F1A9 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61826118213384ED00F4F1A9 /* Array+Extensions.swift */; };
 		61826168213384ED00F4F1A9 /* UISegmentedControl+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61826119213384ED00F4F1A9 /* UISegmentedControl+Extensions.swift */; };
 		61826169213384ED00F4F1A9 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6182611A213384ED00F4F1A9 /* UIImageView+Extensions.swift */; };
@@ -112,6 +113,7 @@
 		612A44E12148CA79008C7DCA /* StatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsVC.swift; sourceTree = "<group>"; };
 		613127402142D9F9007864FC /* DIGITALDREAM.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DIGITALDREAM.ttf; sourceTree = "<group>"; };
 		613127412142D9FB007864FC /* DIGITALDREAMFAT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DIGITALDREAMFAT.ttf; sourceTree = "<group>"; };
+		616DBA91214992E300F6B961 /* MoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreVC.swift; sourceTree = "<group>"; };
 		61826118213384ED00F4F1A9 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		61826119213384ED00F4F1A9 /* UISegmentedControl+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Extensions.swift"; sourceTree = "<group>"; };
 		6182611A213384ED00F4F1A9 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
@@ -561,6 +563,7 @@
 				61AFA6782145907D00060270 /* Journal */,
 				61AFA6772145905B00060270 /* Timer */,
 				612A44E12148CA79008C7DCA /* StatsVC.swift */,
+				616DBA91214992E300F6B961 /* MoreVC.swift */,
 			);
 			path = TabViews;
 			sourceTree = "<group>";
@@ -912,6 +915,7 @@
 				61826184213384ED00F4F1A9 /* PhotoLibraryPickerViewController.swift in Sources */,
 				61826178213384ED00F4F1A9 /* AttributedTextBlock.swift in Sources */,
 				6182617B213384ED00F4F1A9 /* LocaleStore.swift in Sources */,
+				616DBA92214992E300F6B961 /* MoreVC.swift in Sources */,
 				61826167213384ED00F4F1A9 /* Array+Extensions.swift in Sources */,
 				61826174213384ED00F4F1A9 /* Optional+Extensions.swift in Sources */,
 				61BC7EA82141752A0043803F /* TimerVC.swift in Sources */,
