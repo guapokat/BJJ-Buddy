@@ -272,11 +272,6 @@ class TimerVC: UIViewController {
             }
             myGroup.notify(queue: DispatchQueue.main) {
                 let user = users[0] //ERROR HERE
-                
-                print("Adding \(self.roundsCompleted) rounds to total rounds \(user.totalRounds)")
-                print("Adding \(self.totalTimeRolled) seconds to total time rolled \(user.totalTimeRolled)")
-                print("Adding \(self.totalTimeRested) seconds to total time rested \(user.totalTimeRested)")
-                
                 user.totalRounds += Int64(self.roundsCompleted)
                 user.totalTimeRolled += Int64(self.totalTimeRolled)
                 user.totalTimeRested += Int64(self.totalTimeRested)

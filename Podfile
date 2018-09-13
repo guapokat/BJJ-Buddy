@@ -7,7 +7,8 @@ target 'BJJ Buddy' do
 
   # Pods for BJJ Buddy
 pod 'RAMAnimatedTabBarController'
-pod  'SwiftySound'
+pod 'SwiftySound'
+pod 'FacebookShare'
 
   target 'BJJ BuddyTests' do
     inherit! :search_paths

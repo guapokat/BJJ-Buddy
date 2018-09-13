@@ -4,19 +4,19 @@
         <attribute name="date" attributeType="String" syncable="YES"/>
         <attribute name="entry" attributeType="String" syncable="YES"/>
         <attribute name="numberOfRounds" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="rollingTime" optional="YES" attributeType="Integer 16" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rollingTime" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="time" attributeType="String" syncable="YES"/>
-        <attribute name="trainingTime" optional="YES" attributeType="Integer 16" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="trainingTime" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
-        <attribute name="belt" optional="YES" attributeType="Integer 16" defaultValueString="7" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="belt" attributeType="Integer 16" minValueString="0" maxValueString="9" defaultValueString="9" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="totalClassTime" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="totalRounds" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="totalTimeRested" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="totalTimeRolled" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="JournalEntry" positionX="-63" positionY="-18" width="128" height="135"/>
-        <element name="User" positionX="-54" positionY="18" width="128" height="120"/>
+        <element name="JournalEntry" positionX="126" positionY="18" width="128" height="135"/>
+        <element name="User" positionX="135" positionY="72" width="128" height="120"/>
     </elements>
 </model>

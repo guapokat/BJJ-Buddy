@@ -35,6 +35,8 @@ class JournalTableViewController: UITableViewController {
     //Making sure table is updated before it is presentedd
     override func viewWillAppear(_ animated: Bool) {
         fetchData()
+        print("ENTRIES: ")
+        print("Entries: \(self.entries)")
     }
     
     override func viewDidLoad() {

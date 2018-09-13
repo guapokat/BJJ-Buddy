@@ -37,12 +37,6 @@ class StatsVC: UIViewController {
         switch emptyCheck {
         case 0:
             updateDisplay()
-//            totalTrainingTimeLabel.text = "N/A"
-//            totalRollingTimeLabel.text = "N/A"
-//            totalRestTimeLabel.text = "N/A"
-//            totalRoundsRolledLabel.text = "N/A"
-//            totalJournalEntriesLabel.text = "N/A"
-//            averageWordsPerEntryLabel.text = "N/A"
         case 1:
             configureUserEntityStats()
             updateDisplay()
