@@ -46,22 +46,21 @@ class MoreVC: UIViewController {
     }
     
     @IBAction func deleteJournalEntriesButton(_ sender: UIButton) {
-        presentDeleteAlert(usersOrJournals: entries)
+        presentDeleteAlert(usersOrJournals: entries, both: false)
     }
     
     @IBAction func deleteTimerStatsButton(_ sender: UIButton) {
-        presentDeleteAlert(usersOrJournals: users)
+        presentDeleteAlert(usersOrJournals: users, both: false)
     }
     
     @IBAction func deleteAllButton(_ sender: Any) {
-        presentDeleteAlert(usersOrJournals: entries)
-        presentDeleteAlert(usersOrJournals: users)
+        presentDeleteAlert(usersOrJournals: entries, both: true)
     }
     
     //MARK: - CUSTOM FUNCTIONS
     
-    func presentDeleteAlert(usersOrJournals: [NSObject]) {
-        let deleteAlert = UIAlertController(style: .alert, title: "Are you sure?", message: "Type 'Delete' to delete all journal entries.")
+    func presentDeleteAlert(usersOrJournals: [NSObject], both: Bool) {
+        let deleteAlert = UIAlertController(title: "Are you sure?", message: "Type 'Delete' to confirm.", preferredStyle: .alert)
         let config: TextField.Config = { textField in
             textField.becomeFirstResponder()
             textField.textColor = .red
@@ -83,33 +82,41 @@ class MoreVC: UIViewController {
                 }
             }
         }
-        
         deleteAlert.addOneTextField(configuration: config)
-        
         deleteAlert.addAction(title: "OK", style: .cancel, handler: ({ action in
             if self.deleteString.lowercased() == "delete" {
-                if usersOrJournals is [JournalEntry] {
-                    //delete journal entries
-                    for item in self.entries {
-                        self.context.delete(item)
-                        (UIApplication.shared.delegate as! AppDelegate).saveContext()
-                    }
+                if both == true {
+                    self.deleteUserStats()
+                    self.deleteJournalEntries()
+                } else if usersOrJournals is [JournalEntry] {
+                    self.deleteJournalEntries()
                 } else {
                     //delete user entries
-                    self.users[0].totalRounds = 0
-                    self.users[0].totalTimeRested = 0
-                    self.users[0].totalTimeRolled = 0
+                    self.deleteUserStats()
                 }
             } else {
                 print("Nothing Done") //TODO: - handle this case
             }
-            (UIApplication.shared.delegate as! AppDelegate).saveContext()
         }))
         deleteAlert.show()
     }
     
+    func deleteJournalEntries() {
+        for item in self.entries {
+            self.context.delete(item)
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        }
+    }
+    
+    func deleteUserStats() {
+        self.users[0].totalRounds = 0
+        self.users[0].totalTimeRested = 0
+        self.users[0].totalTimeRolled = 0
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+    }
+    
     func presentBeltPickerAlert(_ sendingVC: UIViewController) {
-        let beltAlert = UIAlertController(style: .actionSheet, title: "Pick Belt Color", message: nil)
+        let beltAlert = UIAlertController(title: "Pick Belt Color", message: nil, preferredStyle: .actionSheet)
         let beltChoices = ["----","White","Grey","Yellow","Orange","Green","Blue","Purple","Brown","Black"]
         let pickerViewSelectedValue: PickerViewViewController.Index = (column: 0, row: 0)
         

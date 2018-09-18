@@ -37,10 +37,8 @@ class AddEntryVC: UIViewController, UITextViewDelegate {
     
         //sets text color to black on edit and empties field
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if entryField.textColor == UIColor.lightGray {
-            entryField.text = nil
-            entryField.textColor = UIColor.black
-        }
+        entryField.textColor = #colorLiteral(red: 0.1607843137, green: 0.1607843137, blue: 0.1647058824, alpha: 1)
+        entryField.text = nil
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
@@ -135,8 +133,7 @@ class AddEntryVC: UIViewController, UITextViewDelegate {
     
     //MARK: - CUSTOM FUNCTIONS
     func presentMinutePickeralert(_ sendingVC: UIViewController) {
-        
-        let alert = UIAlertController(style: .actionSheet, title: "Add Time", message: "How many minutes was training/class?")
+        let alert = UIAlertController(title: "Add Time", message: "How many minutes was training/class?", preferredStyle: .actionSheet)
         let minuteChoices = Array(15...180).map{ CGFloat($0) }
         let pickerViewValues: [[String]] = [minuteChoices.map{ Int($0).description }]
         let pickerViewSelectedValue: PickerViewViewController.Index = (column: 0, row: minuteChoices.index(of: 60) ?? 0)
@@ -159,7 +156,7 @@ class AddEntryVC: UIViewController, UITextViewDelegate {
     
     func presentRollingPickerAlertFirst(_ sendingVC: UIViewController) {
         
-        let roundAlert = UIAlertController(style: .actionSheet, title: "Add Rounds", message: "How many rounds did you roll/spar for?")
+        let roundAlert = UIAlertController(title: "Add Rounds", message: "How many rounds did you roll/spar for?", preferredStyle: .actionSheet)
         let roundChoices = Array(1...10).map{ CGFloat($0) }
         let roundPickerViewValues: [[String]] = [roundChoices.map{ Int($0).description }]
         let roundPickerViewSelectedValue: PickerViewViewController.Index = (column: 0, row: roundChoices.index(of: 5) ?? 0)
@@ -173,14 +170,13 @@ class AddEntryVC: UIViewController, UITextViewDelegate {
                 self.numberOfRounds = 5
             }
             self.presentRollingPickerAlertSecond(self)
-            print("\n\n numer of rounds - > \(self.numberOfRounds!)")
         })
         
         sendingVC.present(roundAlert, animated: true, completion: {})
     }
     
     func presentRollingPickerAlertSecond(_ sendingVC: UIViewController) {
-        let alert = UIAlertController(style: .actionSheet, title: "Add Time", message: "How many minutes per round?")
+        let alert = UIAlertController(title: "Add Time", message: "How many minutes per round?", preferredStyle: .actionSheet)
         let minuteChoices = Array(1...9).map{ CGFloat($0) }
         let pickerViewValues: [[String]] = [minuteChoices.map{ Int($0).description }]
         let pickerViewSelectedValue: PickerViewViewController.Index = (column: 0, row: minuteChoices.index(of: 5) ?? 0)
@@ -193,9 +189,7 @@ class AddEntryVC: UIViewController, UITextViewDelegate {
             if self.rollingTimeAmount == nil {
                 self.rollingTimeAmount = 5
             }
-            print("Minutes per round - > \(self.rollingTimeAmount!)")
             self.updateRollingLabel(numberOfRounds: self.numberOfRounds!, timePerRound: self.rollingTimeAmount!)
-
         })
         
         sendingVC.present(alert, animated: true, completion: {})

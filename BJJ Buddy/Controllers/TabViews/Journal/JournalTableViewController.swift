@@ -72,7 +72,7 @@ extension JournalTableViewController {
             cell.textLabel?.text = titleString
             
             if trainingTime != 0 && timePerRound == 0 {
-                cell.detailTextLabel?.text = "Training: \(trainingTime) Minutes"
+                cell.detailTextLabel?.text = "Training: \(trainingTime) Min(s)"
             } else if trainingTime == 0 && timePerRound != 0 {
                 cell.detailTextLabel?.text = "Rolled: \(rounds) round(s) of \(timePerRound) min(s)"
             } else if trainingTime != 0 && timePerRound != 0 {

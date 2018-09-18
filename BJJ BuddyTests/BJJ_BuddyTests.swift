@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import BJJ_Buddy
 
 class BJJ_BuddyTests: XCTestCase {
     

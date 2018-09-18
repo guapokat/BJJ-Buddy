@@ -67,7 +67,7 @@ class EditEntryVC: UIViewController {
     }
     
     func presentMinutePickeralert(_ sendingVC: UIViewController) {
-        let alert = UIAlertController(style: .actionSheet, title: "Add Time", message: "How many minutes was training/class?")
+        let alert = UIAlertController(title: "Add Time", message: "How many minutes was training/class?", preferredStyle: .actionSheet)
         let minuteChoices = Array(15...180).map{ CGFloat($0) }
         let pickerViewValues: [[String]] = [minuteChoices.map{ Int($0).description }]
         let pickerViewSelectedValue: PickerViewViewController.Index = (column: 0, row: minuteChoices.index(of: 60) ?? 0)
@@ -90,7 +90,7 @@ class EditEntryVC: UIViewController {
     
     func presentRollingPickerAlertFirst(_ sendingVC: UIViewController) {
         
-        let alert = UIAlertController(style: .actionSheet, title: "Add Rounds", message: "How many rounds did you roll/spar for?")
+        let alert = UIAlertController(title: "Add Rounds", message: "How many rounds did you roll/spar for?", preferredStyle: .actionSheet)
         let roundChoices = Array(1...10).map{ CGFloat($0) }
         let pickerViewValues: [[String]] = [roundChoices.map{ Int($0).description }]
         let pickerViewSelectedValue: PickerViewViewController.Index = (column: 0, row: roundChoices.index(of: 5) ?? 0)
@@ -110,7 +110,7 @@ class EditEntryVC: UIViewController {
     }
     
     func presentRollingPickerAlertSecond(_ sendingVC: UIViewController) {
-        let alert = UIAlertController(style: .actionSheet, title: "Add Time", message: "How many minutes per round?")
+        let alert = UIAlertController(title: "Add Time", message: "How many minutes per round?", preferredStyle: .actionSheet)
         let minuteChoices = Array(1...9).map{ CGFloat($0) }
         let pickerViewValues: [[String]] = [minuteChoices.map{ Int($0).description }]
         let pickerViewSelectedValue: PickerViewViewController.Index = (column: 0, row: minuteChoices.index(of: 5) ?? 0)
@@ -145,7 +145,7 @@ class EditEntryVC: UIViewController {
             presentMinutePickeralert(self)
         } else {
             trainingTimeLabel.isHidden = true
-            trainingTime = 0
+            trainingTime = nil
         }
     }
     
@@ -154,7 +154,7 @@ class EditEntryVC: UIViewController {
             presentRollingPickerAlertFirst(self)
         } else {
             rollingTimeLabel.isHidden = true
-            rollingTime = 0
+            rollingTime = nil
         }
     }
 

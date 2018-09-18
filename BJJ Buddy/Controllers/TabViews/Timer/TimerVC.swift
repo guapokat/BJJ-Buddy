@@ -130,6 +130,7 @@ class TimerVC: UIViewController {
     
     func runTimer() {
         isTimerRunning = true
+        UIApplication.shared.isIdleTimerDisabled = true
         if regularRound {
             Sound.stopAll()
             Sound.play(file: "roundStart.mp3")
@@ -180,6 +181,7 @@ class TimerVC: UIViewController {
     func stopTimer() {
         timer.invalidate()
         isTimerRunning = false
+        UIApplication.shared.isIdleTimerDisabled = false
         self.startButton.setTitle("Start", for: .normal)
     }
     
@@ -257,10 +259,10 @@ class TimerVC: UIViewController {
         var users: [User]
         
         do {
-            let myGroup = DispatchGroup()
+            //let myGroup = DispatchGroup()
             users = try context.fetch(User.fetchRequest())
             if users.isEmpty {
-                myGroup.enter()
+                //myGroup.enter()
                 let newUser = User(context: context)
                 newUser.totalRounds = 0
                 newUser.totalTimeRested = 0
@@ -268,16 +270,16 @@ class TimerVC: UIViewController {
                 (UIApplication.shared.delegate as! AppDelegate).saveContext()
                 print("user saved")
                 users = try context.fetch(User.fetchRequest())
-                myGroup.leave()
+                //myGroup.leave()
             }
-            myGroup.notify(queue: DispatchQueue.main) {
+            //myGroup.notify(queue: DispatchQueue.main) {
                 let user = users[0] //ERROR HERE
                 user.totalRounds += Int64(self.roundsCompleted)
                 user.totalTimeRolled += Int64(self.totalTimeRolled)
                 user.totalTimeRested += Int64(self.totalTimeRested)
                 (UIApplication.shared.delegate as! AppDelegate).saveContext()
                 self.dismiss(animated: true, completion: nil)
-            }
+           // }
         } catch {
             print("Couldn't fetch user")
         }

@@ -189,5 +189,18 @@ class StatsVC: UIViewController {
         }
         return wordCount
     }
-    //TODO: - Connect Social Media Buttons
+    
+    //MARK: - ACTIONS
+    @IBAction func facebookButton(_ sender: UIButton) {
+        // Screenshot:
+        UIGraphicsBeginImageContextWithOptions(self.view.frame.size, true, 0.0)
+        self.view.drawHierarchy(in: self.view.frame, afterScreenUpdates: false)
+        let img = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        let items = [img]
+        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        present(ac, animated: true)
+    }
+    
 }
