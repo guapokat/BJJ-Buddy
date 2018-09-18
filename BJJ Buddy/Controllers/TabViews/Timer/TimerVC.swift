@@ -259,10 +259,8 @@ class TimerVC: UIViewController {
         var users: [User]
         
         do {
-            //let myGroup = DispatchGroup()
             users = try context.fetch(User.fetchRequest())
             if users.isEmpty {
-                //myGroup.enter()
                 let newUser = User(context: context)
                 newUser.totalRounds = 0
                 newUser.totalTimeRested = 0
@@ -270,16 +268,13 @@ class TimerVC: UIViewController {
                 (UIApplication.shared.delegate as! AppDelegate).saveContext()
                 print("user saved")
                 users = try context.fetch(User.fetchRequest())
-                //myGroup.leave()
             }
-            //myGroup.notify(queue: DispatchQueue.main) {
-                let user = users[0] //ERROR HERE
-                user.totalRounds += Int64(self.roundsCompleted)
-                user.totalTimeRolled += Int64(self.totalTimeRolled)
-                user.totalTimeRested += Int64(self.totalTimeRested)
-                (UIApplication.shared.delegate as! AppDelegate).saveContext()
-                self.dismiss(animated: true, completion: nil)
-           // }
+            let user = users[0]
+            user.totalRounds += Int64(self.roundsCompleted)
+            user.totalTimeRolled += Int64(self.totalTimeRolled)
+            user.totalTimeRested += Int64(self.totalTimeRested)
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            self.dismiss(animated: true, completion: nil)
         } catch {
             print("Couldn't fetch user")
         }

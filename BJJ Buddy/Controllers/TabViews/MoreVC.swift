@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class MoreVC: UIViewController {
+class MoreVC: UIViewController, MFMailComposeViewControllerDelegate {
     
     //MARK: - OUTLETS
     @IBOutlet var beltColorLabel: UILabel!
@@ -57,6 +58,17 @@ class MoreVC: UIViewController {
         presentDeleteAlert(usersOrJournals: entries, both: true)
     }
     
+    @IBAction func contactButton(_ sender: UIButton) {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["vidzucreations@gmail.com"])
+            mail.setSubject("BJJ Buddy - Comment")
+            mail.setMessageBody("Please enter any feature requests, bugs, or comments here. I thank you for using this app and I only hope to improve it as time passes.", isHTML: true)
+            
+            present(mail, animated: true)
+        }
+    }
     //MARK: - CUSTOM FUNCTIONS
     
     func presentDeleteAlert(usersOrJournals: [NSObject], both: Bool) {
@@ -95,7 +107,7 @@ class MoreVC: UIViewController {
                     self.deleteUserStats()
                 }
             } else {
-                print("Nothing Done") //TODO: - handle this case
+                print("Nothing Done") //TODO: handle this case
             }
         }))
         deleteAlert.show()
@@ -152,9 +164,13 @@ class MoreVC: UIViewController {
                 users = try context.fetch(User.fetchRequest())
             }
         } catch {
-            //TODO: - Error handling
+            //TODO: Error handling
             print("Couldn't fetch data")
         }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
     }
 
 }
