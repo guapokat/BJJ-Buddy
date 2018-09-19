@@ -17,6 +17,7 @@ class RoundTimerVC: UIViewController, UITextFieldDelegate {
     @IBOutlet var prepTime: [UITextField]!
     @IBOutlet var roundLength: [UITextField]!
     @IBOutlet var restInterval: [UITextField]!
+    @IBOutlet var viewTitleLabel: UILabel!
     
     var rounds = 0
     var prep = 0
@@ -27,6 +28,10 @@ class RoundTimerVC: UIViewController, UITextFieldDelegate {
     let limitLength = 2 //character limit
     
     //MARK: - LIFECYCLE METHODS
+    override func viewWillAppear(_ animated: Bool) {
+        BeltFunctions().changeLabelBackgroundColor(forLabel: viewTitleLabel)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         assignDelegates()

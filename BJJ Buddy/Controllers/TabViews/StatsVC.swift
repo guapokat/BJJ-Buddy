@@ -17,6 +17,7 @@ class StatsVC: UIViewController {
     @IBOutlet var totalRoundsRolledLabel: UILabel!
     @IBOutlet var totalJournalEntriesLabel: UILabel!
     @IBOutlet var averageWordsPerEntryLabel: UILabel!
+    @IBOutlet var viewTitleLabel: UILabel!
     
     //MARK: - VARIABLES
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -32,6 +33,7 @@ class StatsVC: UIViewController {
 
     //MARK: - LIFECYCLE FUNCTIONS
     override func viewWillAppear(_ animated: Bool) {
+        BeltFunctions().changeLabelBackgroundColor(forLabel: viewTitleLabel)
         fetchData()
         let emptyCheck = checkIfEmpty()
         switch emptyCheck {

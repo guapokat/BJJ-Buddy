@@ -21,8 +21,14 @@ class AddEntryVC: UIViewController, UITextViewDelegate {
     @IBOutlet weak var trainingUISwitch: UISwitch!
     @IBOutlet weak var trainingMinutesLabel: UILabel!
     @IBOutlet weak var rollingMinutesLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet var viewTitleLabel: UILabel!
     
     //MARK: - Lifecycle methods
+    override func viewWillAppear(_ animated: Bool) {
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -14,6 +14,8 @@ class MoreVC: UIViewController, MFMailComposeViewControllerDelegate {
     //MARK: - OUTLETS
     @IBOutlet var beltColorLabel: UILabel!
     @IBOutlet var beltColorImage: UIImageView!
+    @IBOutlet var viewTitleLabel: UILabel!
+    
     
     //MARK: - VARIABLES
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -25,6 +27,7 @@ class MoreVC: UIViewController, MFMailComposeViewControllerDelegate {
 
     //MARK: - LIFECYCLE FUNCTIONS
     override func viewWillAppear(_ animated: Bool) {
+        BeltFunctions().changeLabelBackgroundColor(forLabel: viewTitleLabel)
         fetchData()
         if users[0].belt >= 9 {
             beltColorLabel.isHidden = true
@@ -149,6 +152,7 @@ class MoreVC: UIViewController, MFMailComposeViewControllerDelegate {
         }
         beltAlert.addAction(title: "Done", style: .default, handler: ({ action in
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            BeltFunctions().changeLabelBackgroundColor(forLabel: self.viewTitleLabel)
         }))
         sendingVC.present(beltAlert, animated: true, completion: {})
     }
