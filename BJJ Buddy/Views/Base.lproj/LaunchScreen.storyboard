@@ -29,12 +29,12 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BJJ Buddy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3x8-pi-d7s">
-                                <rect key="frame" x="77.333333333333329" y="298" width="220.66666666666669" height="56"/>
+                                <rect key="frame" x="78.666666666666671" y="298" width="217.66666666666663" height="55"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="45"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.25882352939999997" green="0.25490196079999999" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="shadowOffset" width="3" height="3"/>
+                                <color key="shadowColor" red="0.1529411765" green="0.1647058824" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© Vidzu Apps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFk-tX-Ttk">
                                 <rect key="frame" x="136.66666666666666" y="777.66666666666663" width="101.66666666666666" height="19.333333333333371"/>
@@ -46,7 +46,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.52156862749999999" green="0.72941176470000002" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.83137254900000002" green="0.25490196079999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oFk-tX-Ttk" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="11c-7k-rL1"/>
                             <constraint firstAttribute="bottom" secondItem="oFk-tX-Ttk" secondAttribute="bottom" constant="15" id="CMU-pb-I0r"/>

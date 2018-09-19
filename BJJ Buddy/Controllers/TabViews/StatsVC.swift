@@ -18,18 +18,20 @@ class StatsVC: UIViewController {
     @IBOutlet var totalJournalEntriesLabel: UILabel!
     @IBOutlet var averageWordsPerEntryLabel: UILabel!
     @IBOutlet var viewTitleLabel: UILabel!
+    @IBOutlet var buddyIcon: UIImageView!
     
     //MARK: - VARIABLES
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var users: [User] = []
     var entries: [JournalEntry] = []
-    
+
     var totalTrainingTime = 0
     var totalRollingTime = 0
     var totalRestTime = 0
     var totalRoundsRolled = 0
     var totalJournalEntries = 0
     var averageWordsPerEntry = 0
+    let animations = Animations()
 
     //MARK: - LIFECYCLE FUNCTIONS
     override func viewWillAppear(_ animated: Bool) {
@@ -51,6 +53,8 @@ class StatsVC: UIViewController {
             configureUserEntityStats()
             updateDisplay()
         }
+        animations.bringImageUp(forImage: buddyIcon)
+        animations.moveLabelIn(forTitle: viewTitleLabel)
     }
     
     override func viewDidLoad() {
@@ -59,6 +63,8 @@ class StatsVC: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         reset()
+        animations.moveLabelOut(forTitle: viewTitleLabel)
+        animations.bringImageDown(forImage: buddyIcon)
     }
     
     //MARK: - CUSTOM FUNCTIONS
@@ -194,14 +200,15 @@ class StatsVC: UIViewController {
     
     //MARK: - ACTIONS
     @IBAction func facebookButton(_ sender: UIButton) {
+        buddyIcon.layer.removeAllAnimations()
         // Screenshot:
         UIGraphicsBeginImageContextWithOptions(self.view.frame.size, true, 0.0)
-        self.view.drawHierarchy(in: self.view.frame, afterScreenUpdates: false)
+        self.view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let img = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        
+    
         let items = [img]
-        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        let ac = UIActivityViewController(activityItems: items as [Any], applicationActivities: nil)
         present(ac, animated: true)
     }
     

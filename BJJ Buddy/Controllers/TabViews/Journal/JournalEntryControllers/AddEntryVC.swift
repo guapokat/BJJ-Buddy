@@ -26,7 +26,8 @@ class AddEntryVC: UIViewController, UITextViewDelegate {
     
     //MARK: - Lifecycle methods
     override func viewWillAppear(_ animated: Bool) {
-
+        Animations().moveLabelIn(forTitle: viewTitleLabel)
+        Animations().bringFieldIn(forView: entryField)
     }
     
     override func viewDidLoad() {
@@ -37,6 +38,10 @@ class AddEntryVC: UIViewController, UITextViewDelegate {
         
         trainingMinutesLabel.isHidden = true
         rollingMinutesLabel.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        Animations().moveLabelOut(forTitle: viewTitleLabel)
     }
     
     //MARK: - Text View

@@ -16,6 +16,7 @@ class EditEntryVC: UIViewController {
     @IBOutlet var rollingTimeLabel: UILabel!
     @IBOutlet var trainingTimeSwitch: UISwitch!
     @IBOutlet var rollingTimeSwitch: UISwitch!
+    @IBOutlet var viewTitleLabel: UILabel!
     
     
     //MARK: - Variables
@@ -24,10 +25,14 @@ class EditEntryVC: UIViewController {
     var rollingTime: Int?
     var numberOfRounds: Int?
     
-    //MARK: - System Functions
+    //MARK: - LifeCycle Functions
+    override func viewWillAppear(_ animated: Bool) {
+        Animations().moveLabelIn(forTitle: viewTitleLabel)
+        Animations().bringFieldIn(forView: entryView)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         trainingTimeLabel.isHidden = true
         rollingTimeLabel.isHidden = true
         trainingTimeSwitch.isOn = false
@@ -35,7 +40,10 @@ class EditEntryVC: UIViewController {
         
         configureEntryData(entry: entry)
         configureTimeLabels(entry: entry)
-        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        Animations().moveLabelOut(forTitle: viewTitleLabel)
     }
     
     //dismissing on touch anywhere

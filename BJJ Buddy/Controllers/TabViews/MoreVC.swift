@@ -15,6 +15,7 @@ class MoreVC: UIViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet var beltColorLabel: UILabel!
     @IBOutlet var beltColorImage: UIImageView!
     @IBOutlet var viewTitleLabel: UILabel!
+    @IBOutlet var buddyIcon: UIImageView!
     
     
     //MARK: - VARIABLES
@@ -24,6 +25,7 @@ class MoreVC: UIViewController, MFMailComposeViewControllerDelegate {
     var entries: [JournalEntry] = []
     let beltImages = [#imageLiteral(resourceName: "White"), #imageLiteral(resourceName: "Grey"), #imageLiteral(resourceName: "Yellow"), #imageLiteral(resourceName: "Orange"), #imageLiteral(resourceName: "Green"), #imageLiteral(resourceName: "Blue"), #imageLiteral(resourceName: "Purple"), #imageLiteral(resourceName: "Brown"), #imageLiteral(resourceName: "Black")]
     let beltNames = ["White","Grey","Yellow","Orange","Green","Blue","Purple","Brown","Black"]
+    let animations = Animations()
 
     //MARK: - LIFECYCLE FUNCTIONS
     override func viewWillAppear(_ animated: Bool) {
@@ -38,10 +40,17 @@ class MoreVC: UIViewController, MFMailComposeViewControllerDelegate {
             beltColorLabel.isHidden = false
             beltColorImage.isHidden = false
         }
+        animations.moveLabelIn(forTitle: viewTitleLabel)
+        animations.bringImageUp(forImage: buddyIcon)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        animations.moveLabelOut(forTitle: viewTitleLabel)
+        animations.bringImageDown(forImage: buddyIcon)
     }
     
     //MARK: - ACTIONS

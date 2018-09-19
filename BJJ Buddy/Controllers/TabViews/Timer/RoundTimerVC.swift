@@ -18,11 +18,13 @@ class RoundTimerVC: UIViewController, UITextFieldDelegate {
     @IBOutlet var roundLength: [UITextField]!
     @IBOutlet var restInterval: [UITextField]!
     @IBOutlet var viewTitleLabel: UILabel!
+    @IBOutlet var buddyIcon: UIImageView!
     
     var rounds = 0
     var prep = 0
     var length = 0
     var rest = 0
+    let animations = Animations()
     
     //MARK: - VARIABLES
     let limitLength = 2 //character limit
@@ -30,6 +32,8 @@ class RoundTimerVC: UIViewController, UITextFieldDelegate {
     //MARK: - LIFECYCLE METHODS
     override func viewWillAppear(_ animated: Bool) {
         BeltFunctions().changeLabelBackgroundColor(forLabel: viewTitleLabel)
+        animations.moveLabelIn(forTitle: viewTitleLabel)
+        animations.bringImageUp(forImage: buddyIcon)
     }
     
     override func viewDidLoad() {
@@ -38,6 +42,11 @@ class RoundTimerVC: UIViewController, UITextFieldDelegate {
         
         //Dismiss keyboard on touch
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        animations.moveLabelOut(forTitle: viewTitleLabel)
+        animations.bringImageDown(forImage: buddyIcon)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

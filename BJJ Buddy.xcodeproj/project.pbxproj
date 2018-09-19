@@ -13,6 +13,7 @@
 		613127432142D9FD007864FC /* DIGITALDREAMFAT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 613127412142D9FB007864FC /* DIGITALDREAMFAT.ttf */; };
 		614D907321515E1800727922 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614D907221515E1800727922 /* Colors.swift */; };
 		614D907521515F0100727922 /* beltFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614D907421515F0100727922 /* beltFunctions.swift */; };
+		614D907B2152BE5000727922 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614D907A2152BE5000727922 /* Animations.swift */; };
 		616DBA92214992E300F6B961 /* MoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616DBA91214992E300F6B961 /* MoreVC.swift */; };
 		61826167213384ED00F4F1A9 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61826118213384ED00F4F1A9 /* Array+Extensions.swift */; };
 		61826168213384ED00F4F1A9 /* UISegmentedControl+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61826119213384ED00F4F1A9 /* UISegmentedControl+Extensions.swift */; };
@@ -91,6 +92,7 @@
 		613127412142D9FB007864FC /* DIGITALDREAMFAT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DIGITALDREAMFAT.ttf; sourceTree = "<group>"; };
 		614D907221515E1800727922 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		614D907421515F0100727922 /* beltFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beltFunctions.swift; sourceTree = "<group>"; };
+		614D907A2152BE5000727922 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		616DBA91214992E300F6B961 /* MoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreVC.swift; sourceTree = "<group>"; };
 		61826118213384ED00F4F1A9 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		61826119213384ED00F4F1A9 /* UISegmentedControl+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Extensions.swift"; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				61A0EAF5212DE12E00E223AE /* Fonts */,
 				614D907221515E1800727922 /* Colors.swift */,
 				614D907421515F0100727922 /* beltFunctions.swift */,
+				614D907A2152BE5000727922 /* Animations.swift */,
 			);
 			path = External;
 			sourceTree = "<group>";
@@ -682,6 +685,7 @@
 				6182619A213384ED00F4F1A9 /* TextField.swift in Sources */,
 				6117ED08213E37A2007999AB /* keyboardDoneButton.swift in Sources */,
 				61826178213384ED00F4F1A9 /* AttributedTextBlock.swift in Sources */,
+				614D907B2152BE5000727922 /* Animations.swift in Sources */,
 				616DBA92214992E300F6B961 /* MoreVC.swift in Sources */,
 				61826167213384ED00F4F1A9 /* Array+Extensions.swift in Sources */,
 				61826174213384ED00F4F1A9 /* Optional+Extensions.swift in Sources */,
