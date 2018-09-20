@@ -10,7 +10,7 @@ import UIKit
 
 class RoundTimerVC: UIViewController, UITextFieldDelegate {
     
-    //MARK: - OUTLETS
+    //MARK: - Outlets
     @IBOutlet var startButton: UIButton!
     @IBOutlet var clearButton: UIButton!
     @IBOutlet var numberOfRounds: UITextField!
@@ -20,16 +20,15 @@ class RoundTimerVC: UIViewController, UITextFieldDelegate {
     @IBOutlet var viewTitleLabel: UILabel!
     @IBOutlet var buddyIcon: UIImageView!
     
+    //MARK: - Variables
     var rounds = 0
     var prep = 0
     var length = 0
     var rest = 0
     let animations = Animations()
-    
-    //MARK: - VARIABLES
     let limitLength = 2 //character limit
     
-    //MARK: - LIFECYCLE METHODS
+    //MARK: - Lifecycle Methods
     override func viewWillAppear(_ animated: Bool) {
         BeltFunctions().changeLabelBackgroundColor(forLabel: viewTitleLabel)
         animations.moveLabelIn(forTitle: viewTitleLabel)
@@ -39,7 +38,6 @@ class RoundTimerVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         assignDelegates()
-        
         //Dismiss keyboard on touch
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
     }
@@ -51,22 +49,19 @@ class RoundTimerVC: UIViewController, UITextFieldDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toTimer") {
-            
+            //Fix time data
             convertFields()
-            
             if let nextVC = segue.destination as? TimerVC {
                 nextVC.numberOfRounds = rounds
                 nextVC.prepTime = prep
                 nextVC.roundLength = length
                 nextVC.restInterval = rest
             }
-            
             clearText()
         }
     }
     
-    
-    //MARK: - ACTIONS
+    //MARK: - Actions
     @IBAction func startPressed(_ sender: UIButton) {
         checkFields()
     }
@@ -74,24 +69,21 @@ class RoundTimerVC: UIViewController, UITextFieldDelegate {
         clearText()
     }
     
-    //MARK: CUSTOM METHODS
+    //MARK: Custom Methods
     
     //Converting to useful types
     func convertFields() {
         var tempPrepLength = 0
         var tempRoundLength = 0 //seconds
         var tempRestLength = 0 //seconds
-        
         //Number of Rounds --------------------------------------
         if let value = Int(numberOfRounds.text!) {
             rounds = value
         }
-        
         if rounds == 0 {
             rounds = 1
         }
         //-------------------------------------------------------
-        
         //Prep Time ---------------------------------------------
         if let prepTimeMinute = Int(prepTime[0].text!) {
             tempPrepLength += convertMinute(forTime: prepTimeMinute)
@@ -100,33 +92,24 @@ class RoundTimerVC: UIViewController, UITextFieldDelegate {
         if let prepTimeSeconds = Int(prepTime[1].text!) {
             tempPrepLength += prepTimeSeconds
         }
-        
         prep = tempPrepLength
-        
         //-------------------------------------------------------
-
         //Round Time ---------------------------------------------
         if let roundLengthMinute = Int(roundLength[0].text!) {
             tempRoundLength += convertMinute(forTime: roundLengthMinute)
         }
-        
         if let roundLengthSeconds = Int(roundLength[1].text!) {
             tempRoundLength += roundLengthSeconds
         }
-        
         length = tempRoundLength
-        
         //-------------------------------------------------------
-        
         //Rest Time ---------------------------------------------
         if let restLengthMinute = Int(restInterval[0].text!) {
             tempRestLength += convertMinute(forTime: restLengthMinute)
         }
-        
         if let restLengthSeconds = Int(restInterval[1].text!) {
             tempRestLength += restLengthSeconds
         }
-        
         rest = tempRestLength
         //-------------------------------------------------------
     }
@@ -139,7 +122,6 @@ class RoundTimerVC: UIViewController, UITextFieldDelegate {
     
     //Assuring fields are filled properly
     func checkFields() {
-
         if roundLength[0].text == "" && roundLength[1].text == "" {
             alert(forCondition: 2)
         } else if restInterval[0].text == "" && restInterval[1].text == "" && numberOfRounds.text == ""{
@@ -159,7 +141,6 @@ class RoundTimerVC: UIViewController, UITextFieldDelegate {
         let title1 = "Defaulting to 1 round"
         let title2 = "Round Interval"
         let title3 = "Rest Interval"
-        
         if forCondition == 1 || forCondition == 4{
             let alert = UIAlertController(title: title1, message: "Continue?", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "No", style: .default, handler: { action in }))
@@ -195,7 +176,7 @@ class RoundTimerVC: UIViewController, UITextFieldDelegate {
         }
     }
     
-    //Resets labels and local variables
+    //Reset
     func clearText() {
         numberOfRounds.text = ""
         for field in prepTime {

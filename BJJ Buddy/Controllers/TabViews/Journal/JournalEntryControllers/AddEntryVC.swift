@@ -24,7 +24,7 @@ class AddEntryVC: UIViewController, UITextViewDelegate {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet var viewTitleLabel: UILabel!
     
-    //MARK: - Lifecycle methods
+    //MARK: - Lifecycle Methods
     override func viewWillAppear(_ animated: Bool) {
         Animations().moveLabelIn(forTitle: viewTitleLabel)
         Animations().bringFieldIn(forView: entryField)
@@ -156,6 +156,12 @@ class AddEntryVC: UIViewController, UITextViewDelegate {
         }
         
         alert.addAction(title: "Done", style: .default)
+
+        alert.popoverPresentationController?.sourceView = self.view
+        alert.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection()
+        alert.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+        
+        
         sendingVC.present(alert, animated: true, completion: {
             if self.trainingMinutesLabel.isHidden {
                 self.trainingTimeAmount = 60
@@ -182,7 +188,9 @@ class AddEntryVC: UIViewController, UITextViewDelegate {
             }
             self.presentRollingPickerAlertSecond(self)
         })
-        
+        roundAlert.popoverPresentationController?.sourceView = self.view
+        roundAlert.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection()
+        roundAlert.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
         sendingVC.present(roundAlert, animated: true, completion: {})
     }
     
@@ -202,12 +210,14 @@ class AddEntryVC: UIViewController, UITextViewDelegate {
             }
             self.updateRollingLabel(numberOfRounds: self.numberOfRounds!, timePerRound: self.rollingTimeAmount!)
         })
-        
+        alert.popoverPresentationController?.sourceView = self.view
+        alert.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection()
+        alert.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
         sendingVC.present(alert, animated: true, completion: {})
     }
     
     func updateRollingLabel(numberOfRounds: Int, timePerRound: Int) {
-        self.rollingMinutesLabel.text = "\(numberOfRounds) Rounds of \(timePerRound) Minutes"
+        self.rollingMinutesLabel.text = "\(numberOfRounds) Round(s) of \(timePerRound) Min(s)"
         self.rollingMinutesLabel.isHidden = false
     }
 }

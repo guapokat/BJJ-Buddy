@@ -11,14 +11,14 @@ import MessageUI
 
 class MoreVC: UIViewController, MFMailComposeViewControllerDelegate {
     
-    //MARK: - OUTLETS
+    //MARK: - Outlets
     @IBOutlet var beltColorLabel: UILabel!
     @IBOutlet var beltColorImage: UIImageView!
     @IBOutlet var viewTitleLabel: UILabel!
     @IBOutlet var buddyIcon: UIImageView!
     
     
-    //MARK: - VARIABLES
+    //MARK: - Variables
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var deleteString = ""
     var users: [User] = []
@@ -27,10 +27,11 @@ class MoreVC: UIViewController, MFMailComposeViewControllerDelegate {
     let beltNames = ["White","Grey","Yellow","Orange","Green","Blue","Purple","Brown","Black"]
     let animations = Animations()
 
-    //MARK: - LIFECYCLE FUNCTIONS
+    //MARK: - Lifecycle Methods
     override func viewWillAppear(_ animated: Bool) {
         BeltFunctions().changeLabelBackgroundColor(forLabel: viewTitleLabel)
         fetchData()
+        //Custom data point showing user has not set belt color
         if users[0].belt >= 9 {
             beltColorLabel.isHidden = true
             beltColorImage.isHidden = true
@@ -53,7 +54,7 @@ class MoreVC: UIViewController, MFMailComposeViewControllerDelegate {
         animations.bringImageDown(forImage: buddyIcon)
     }
     
-    //MARK: - ACTIONS
+    //MARK: - Actions
     @IBAction func beltColorButton(_ sender: UIButton) {
         presentBeltPickerAlert(self)
     }
@@ -77,12 +78,17 @@ class MoreVC: UIViewController, MFMailComposeViewControllerDelegate {
             mail.setToRecipients(["vidzucreations@gmail.com"])
             mail.setSubject("BJJ Buddy - Comment")
             mail.setMessageBody("Please enter any feature requests, bugs, or comments here. I thank you for using this app and I only hope to improve it as time passes.", isHTML: true)
-            
+            //For iPads
+            mail.popoverPresentationController?.sourceView = self.view
+            mail.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection()
+            mail.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
             present(mail, animated: true)
         }
     }
-    //MARK: - CUSTOM FUNCTIONS
     
+    //MARK: - Custom methods
+    
+    //Making sure user wants to delete (similar to Github's method)
     func presentDeleteAlert(usersOrJournals: [NSObject], both: Bool) {
         let deleteAlert = UIAlertController(title: "Are you sure?", message: "Type 'Delete' to confirm.", preferredStyle: .alert)
         let config: TextField.Config = { textField in
@@ -99,7 +105,6 @@ class MoreVC: UIViewController, MFMailComposeViewControllerDelegate {
             textField.keyboardType = .default
             textField.isSecureTextEntry = false
             textField.returnKeyType = .done
-
             textField.action { textField in
                 if let string = textField.text {
                     self.deleteString = string
@@ -109,6 +114,9 @@ class MoreVC: UIViewController, MFMailComposeViewControllerDelegate {
         deleteAlert.addOneTextField(configuration: config)
         deleteAlert.addAction(title: "OK", style: .cancel, handler: ({ action in
             if self.deleteString.lowercased() == "delete" {
+                let deleteAlert = UIAlertController(title: "Delete Successful", message: "Items will be deleted", preferredStyle: .alert)
+                deleteAlert.addAction(title: "OK")
+                self.present(deleteAlert, animated: true, completion: nil)
                 if both == true {
                     self.deleteUserStats()
                     self.deleteJournalEntries()
@@ -119,7 +127,9 @@ class MoreVC: UIViewController, MFMailComposeViewControllerDelegate {
                     self.deleteUserStats()
                 }
             } else {
-                print("Nothing Done") //TODO: handle this case
+                let nothingDoneAlert = UIAlertController(title: "Incorrect Entry", message: "Nothing will be Deleted", preferredStyle: .alert)
+                nothingDoneAlert.addAction(title: "OK")
+                self.present(nothingDoneAlert, animated: true, completion: nil)
             }
         }))
         deleteAlert.show()
@@ -163,6 +173,10 @@ class MoreVC: UIViewController, MFMailComposeViewControllerDelegate {
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             BeltFunctions().changeLabelBackgroundColor(forLabel: self.viewTitleLabel)
         }))
+        //For iPads
+        beltAlert.popoverPresentationController?.sourceView = self.view
+        beltAlert.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection()
+        beltAlert.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
         sendingVC.present(beltAlert, animated: true, completion: {})
     }
     

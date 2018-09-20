@@ -11,7 +11,7 @@ import SwiftySound
 
 class TimerVC: UIViewController {
     
-    //MARK: - VARIABLES
+    //MARK: - Variables
     
     //from segue
     var numberOfRounds = 0
@@ -31,7 +31,7 @@ class TimerVC: UIViewController {
     var totalTimeRested = 0
     var tempCounter = 0
     
-    //MARK: - OUTLETS
+    //MARK: - Outlets
     @IBOutlet var roundLabel: UILabel!
     @IBOutlet var startButton: UIButton!
     @IBOutlet var minutesField: UITextField!
@@ -41,7 +41,7 @@ class TimerVC: UIViewController {
     //allowing anything but upside down
     @objc func canRotate() -> Void {}
 
-    //MARK: - LIFECYCLE METHODS
+    //MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         if prepTime == 0 {
@@ -59,29 +59,24 @@ class TimerVC: UIViewController {
         }
     }
     
-    //MARK: - CUSTON METHODS
+    //MARK: - Custom Methods
     
     @objc func updateTimer() {
-        
         if prepRound {
             roundLabel.text = "Get Ready"
         }
-        
         //10 second warning
         if regularRound && currentRoundTime == 11 {
             Sound.stopAll()
             Sound.play(file: "warning", fileExtension: "mp3", numberOfLoops: 2)
         }
-        
         //if current round ended
         if currentRoundTime < 1 {
             stopTimer()
-            
             //If prep round ended
             if prepRound {
                 setUpRegularRound()
             }
-                
             //if a regular round ended
             else if regularRound {
                 roundsCompleted += 1
@@ -102,13 +97,11 @@ class TimerVC: UIViewController {
                     endSession()
                 }
             }
-                
             //If a rest round ended
             else if restRound {
                 setUpRegularRound()
             }
         }
-
         //Running the current round
         else {
             currentRoundTime -= 1
@@ -170,10 +163,10 @@ class TimerVC: UIViewController {
         secondsField.text! = String(format: "%02i", seconds)
     }
     
+    //Fixing time data
     func configureMinutes(withTime: Int) -> Int {
         return withTime / 60
     }
-    
     func configureSeconds(withTime: Int) -> Int {
         return withTime % 60
     }
@@ -211,7 +204,6 @@ class TimerVC: UIViewController {
         if startButton.isEnabled == false {
             startButton.isEnabled = true
         }
-        
         updateDisplay(withTime: currentRoundTime)
     }
     
@@ -250,14 +242,16 @@ class TimerVC: UIViewController {
         saveAlert.addAction(saveButton)
         saveAlert.addAction(declineButton)
         saveAlert.addAction(cancelButton)
-        
+        //For iPads
+        saveAlert.popoverPresentationController?.sourceView = self.view
+        saveAlert.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection()
+        saveAlert.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
         present(saveAlert, animated: true, completion: nil)
     }
     
     func saveToUser() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         var users: [User]
-        
         do {
             users = try context.fetch(User.fetchRequest())
             if users.isEmpty {
@@ -279,8 +273,8 @@ class TimerVC: UIViewController {
             print("Couldn't fetch user")
         }
     }
-    //MARK: - ACTIONS
     
+    //MARK: - Actions
     @IBAction func startButtonPressed(_ sender: UIButton) {
         if isTimerRunning == false {
             runTimer()
@@ -309,7 +303,10 @@ class TimerVC: UIViewController {
         alert.addAction(roundButton)
         alert.addAction(sessionButton)
         alert.addAction(cancelButton)
-        
+        //For iPads
+        alert.popoverPresentationController?.sourceView = self.view
+        alert.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection()
+        alert.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
         present(alert, animated: true, completion: nil)
     }
     

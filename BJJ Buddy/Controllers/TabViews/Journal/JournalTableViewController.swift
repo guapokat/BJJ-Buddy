@@ -15,7 +15,7 @@ class JournalTableViewController: UITableViewController {
     var entries: [JournalEntry] = []
     var selectedIndex: Int!
     
-    //MARK: - CUSTOM FUNCTIONS
+    //MARK: - Custom Methods
     func fetchData() {
         do {
             //Gathering from core data
@@ -25,28 +25,28 @@ class JournalTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         } catch {
-            //TODO: * ERROR HANDLING *
-            print("Couldn't fetch data")
+            let errorAlert = UIAlertController(title: "Error", message: "There was an error loading your data, please send email from 'more' page.", preferredStyle: .alert)
+            errorAlert.addAction(title: "OK")
+            present(errorAlert, animated: true, completion: nil)
         }
     }
 
-    //MARK: - Lifecycle Functions
+    //MARK: - Lifecycle Methods
     
     //Making sure table is updated before it is presentedd
     override func viewWillAppear(_ animated: Bool) {
         fetchData()
-        print("ENTRIES: ")
-        print("Entries: \(self.entries)")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //adjusting table cell sizes
         self.tableView.estimatedRowHeight = 44
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toEdit" {
+            //Sending entry data to Edit vc
             let updateVC = segue.destination as! EditEntryVC
             updateVC.entry = entries.reversed()[selectedIndex!]
         }
@@ -63,9 +63,11 @@ extension JournalTableViewController {
         let trainingTime = entries.reversed()[indexPath.row].trainingTime
         let timePerRound = entries.reversed()[indexPath.row].rollingTime
         let rounds = entries.reversed()[indexPath.row].numberOfRounds
-
+        
+        //adjusting size
         cell.textLabel?.numberOfLines = 0
         
+        //Cell formatting
         if let date = date, let entry = entry {
             let entryBrief =  entry.prefix(99)
             let titleString = date + "\t" + entryBrief + "..."
@@ -81,7 +83,6 @@ extension JournalTableViewController {
                 cell.detailTextLabel?.text = ""
             }
         }
-        
         return cell
     }
     
@@ -108,17 +109,14 @@ extension JournalTableViewController {
             
             self.fetchData()
         }
-        
         return [delete]
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //for segue
         selectedIndex = indexPath.row
-        
         //no highlight
         tableView.deselectRow(at: indexPath, animated: true)
-        
         //perform segue
         performSegue(withIdentifier: "toEdit", sender: self)
     }

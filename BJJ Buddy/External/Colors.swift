@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 class Colors {
-    let whiteBelt = UIColor(hexString: "D0D0D0")
+    let whiteBelt = UIColor(hexString: "A0A0A0")
     let greyBelt = UIColor(hexString: "606060")
-    let yellowBelt = UIColor(hexString: "F5AB35")
+    let yellowBelt = UIColor(hexString: "F39C12")
     let orangeBelt = UIColor(hexString: "F1892D")
     let greenBelt = UIColor(hexString: "007C21")
     let blueBelt = UIColor(hexString: "0057A0")

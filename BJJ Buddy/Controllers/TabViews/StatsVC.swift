@@ -10,7 +10,7 @@ import UIKit
 
 class StatsVC: UIViewController {
     
-    //MARK: - OUTLETS
+    //MARK: - Outlets
     @IBOutlet var totalTrainingTimeLabel: UILabel!
     @IBOutlet var totalRollingTimeLabel: UILabel!
     @IBOutlet var totalRestTimeLabel: UILabel!
@@ -20,11 +20,10 @@ class StatsVC: UIViewController {
     @IBOutlet var viewTitleLabel: UILabel!
     @IBOutlet var buddyIcon: UIImageView!
     
-    //MARK: - VARIABLES
+    //MARK: - Variables
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var users: [User] = []
     var entries: [JournalEntry] = []
-
     var totalTrainingTime = 0
     var totalRollingTime = 0
     var totalRestTime = 0
@@ -33,7 +32,7 @@ class StatsVC: UIViewController {
     var averageWordsPerEntry = 0
     let animations = Animations()
 
-    //MARK: - LIFECYCLE FUNCTIONS
+    //MARK: - Lifecycle Methods
     override func viewWillAppear(_ animated: Bool) {
         BeltFunctions().changeLabelBackgroundColor(forLabel: viewTitleLabel)
         fetchData()
@@ -67,7 +66,7 @@ class StatsVC: UIViewController {
         animations.bringImageDown(forImage: buddyIcon)
     }
     
-    //MARK: - CUSTOM FUNCTIONS
+    //MARK: - Custom Methods
     func reset() {
         totalTrainingTime = 0
         totalRollingTime = 0
@@ -76,6 +75,7 @@ class StatsVC: UIViewController {
         totalJournalEntries = 0
         averageWordsPerEntry = 0
     }
+    
     func checkIfEmpty() -> Int {
         if users.isEmpty && entries.isEmpty {
             return 0 //no user & no entries
@@ -153,16 +153,15 @@ class StatsVC: UIViewController {
         }
     }
     
+    //Manipulating time data
     func makeTimeString(forTime: Int) -> String {
         var timeString = ""
         var hours = 0
         var minutes = 0
         var seconds = 0
-        
         hours = forTime / 3600
         minutes = (forTime % 3600) / 60
         seconds = (forTime % 3600) % 60
-
         if hours == 0 && minutes == 0 && seconds != 00 {
             timeString = "\(seconds)(s)"
             return timeString
@@ -198,7 +197,7 @@ class StatsVC: UIViewController {
         return wordCount
     }
     
-    //MARK: - ACTIONS
+    //MARK: - Actions
     @IBAction func facebookButton(_ sender: UIButton) {
         buddyIcon.layer.removeAllAnimations()
         // Screenshot:
@@ -206,9 +205,12 @@ class StatsVC: UIViewController {
         self.view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let img = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-    
         let items = [img]
         let ac = UIActivityViewController(activityItems: items as [Any], applicationActivities: nil)
+        //For iPads
+        ac.popoverPresentationController?.sourceView = self.view
+        ac.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection()
+        ac.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
         present(ac, animated: true)
     }
     
